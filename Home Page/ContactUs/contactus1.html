@@ -97,6 +97,132 @@
       transition: 0.3s;
     }
 
+
+    /* -------- MOBILE VIEW -------- */
+    @media (max-width: 768px) {
+      .site-footer {
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .logo img {
+        max-width: 60px;
+      }
+
+      .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .footer-nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      /* Hide all links except the heading (first <b> tag) */
+      .footer-nav ul li:not(:first-child) {
+        display: none;
+        padding-left: 15px;
+      }
+
+      /* Style the heading with + icon */
+      .footer-nav ul li:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 12px 0;
+        font-weight: bold;
+        user-select: none;
+      }
+
+      /* Add the + icon */
+      .footer-nav ul li:first-child::after {
+        content: "+";
+        font-size: 1.5em;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+      }
+
+      /* When accordion is active, show all items */
+      .footer-nav ul.active li:not(:first-child) {
+        display: block;
+        animation: slideDown 0.3s ease;
+      }
+
+      /* Change + to − when active */
+      .footer-nav ul.active li:first-child::after {
+        content: "−";
+        transform: rotate(180deg);
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .newsletter {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .newsletter form {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+
+      .newsletter input[type="email"] {
+        width: 100% !important;
+        margin-bottom: 10px;
+      }
+
+      .newsletter button {
+        width: 100%;
+      }
+
+      .social-icons {
+        margin-top: 20px;
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 25px;
+        font-size: 0.85em;
+      }
+
+      .footer-p {
+        font-size: 0.8em;
+        margin-top: 10px;
+      }
+
+      .terms {
+        margin-top: 15px;
+        font-size: 0.75em;
+      }
+    }
+
     header {
       position: fixed !important;
       top: 0;
@@ -458,6 +584,45 @@
         }
 
         lastScroll = currentScroll;
+      });
+    });
+
+    // Footer Accordion Toggle for Mobile
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Only run on mobile screens
+      function initFooterAccordion() {
+        if (window.innerWidth <= 768) {
+          const footerLists = document.querySelectorAll('.footer-nav ul');
+
+          footerLists.forEach(ul => {
+            const firstItem = ul.querySelector('li:first-child');
+
+            if (firstItem) {
+              // Remove any existing click listeners
+              firstItem.replaceWith(firstItem.cloneNode(true));
+              const newFirstItem = ul.querySelector('li:first-child');
+
+              // Add click event
+              newFirstItem.addEventListener('click', function (e) {
+                e.preventDefault();
+                ul.classList.toggle('active');
+              });
+            }
+          });
+        }
+      }
+
+      // Initialize on load
+      initFooterAccordion();
+
+      // Re-initialize on window resize
+      let resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          initFooterAccordion();
+        }, 250);
       });
     });
   </script>
