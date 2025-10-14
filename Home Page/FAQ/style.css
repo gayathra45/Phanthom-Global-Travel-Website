@@ -1,0 +1,234 @@
+:root {
+  --bg: #ffffff;
+  --sky: #08d8ce83;
+  --accent: #01e1ff;
+  --text: #000000;
+  --muted: #59606a;
+  --radius: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 0px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+p.lead {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #f6fbff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 10px 12px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.faq {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.q {
+  font-weight: 600;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.ans {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.faq.open .ans {
+  display: block;
+}
+
+.tip {
+  background: linear-gradient(90deg, var(--sky), #ffffff);
+  padding: 12px;
+  border-radius: 10px;
+  margin: 18px 0;
+}
+
+.faq-image {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.faq-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Banner image (edge-to-edge, no padding/margin) */
+.banner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* removes extra space */
+}
+
+/* keep your existing styles below... */
+
+/* ===== Mobile View ===== */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p.lead {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0;
+  }
+
+  .search {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .search input {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .faq {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .trigger span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .q {
+    font-size: 16px;
+  }
+
+  .meta {
+    font-size: 12px;
+  }
+
+  .ans {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .tip {
+    font-size: 13px;
+    padding: 10px;
+    margin: 14px 0;
+  }
+
+  .banner img {
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  /* Make FAQ button touch-friendly */
+  .trigger {
+    padding: 10px 8px;
+  }
+
+}

@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
+
+/* Apply Oswald to everything */
+* {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.acc-head,
+button,
+.badge {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+:root {
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #0a3f3f;
+  --sky: #00bac4c0;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #fff;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  background: transparent;
+  padding: 0 20px 40px 20px;
+  margin: 0 auto;
+}
+
+/* Banner - Full Width */
+.banner {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header/Title Section */
+main.container h1 {
+  margin: 0 0 12px 0;
+  font-size: 42px;
+  color: #000;
+  line-height: 1.2;
+}
+
+main.container > p.muted {
+  margin: 0 0 16px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Badges */
+.meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.badge {
+  background: var(--sky);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Sections */
+.section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin: 0 0 16px 0;
+  color: #000;
+  font-weight: 600;
+}
+
+.section p {
+  margin: 0 0 16px 0;
+  color: #111;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.section ul {
+  margin: 0 0 16px 0;
+  padding-left: 24px;
+  line-height: 1.7;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+  color: #111;
+  font-size: 16px;
+}
+
+/* Buttons */
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  background: #024e50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+button:hover {
+  background: #036567;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #024e50;
+  border: 2px solid var(--sky);
+}
+
+.btn-ghost:hover {
+  background: var(--sky);
+  color: #fff;
+  border-color: var(--sky);
+}
+
+/* Cookie Status */
+#cookieStatus {
+  margin-top: 12px;
+  display: block;
+}
+
+/* Accordion */
+.accordion {
+  border-top: 2px solid var(--sky);
+  padding-top: 24px;
+  margin-top: 40px;
+}
+
+.acc-item {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.acc-item:hover {
+  border-color: var(--sky);
+  box-shadow: 0 2px 8px rgba(0, 186, 196, 0.1);
+}
+
+.acc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  transition: background 0.2s ease;
+}
+
+.acc-head:hover {
+  background: #f9fafb;
+}
+
+.acc-head strong {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.acc-head .muted {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.acc-body {
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+  display: none;
+  background: #fafafa;
+}
+
+.acc-body p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.acc-body ul {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.acc-body ul li {
+  margin-bottom: 8px;
+}
+
+/* Muted text */
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Links */
+a {
+  color: #024e50;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--sky);
+  text-decoration: underline;
+}
+
+/* Last Updated */
+main.container > p.muted:last-of-type {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+/* Footer - Full Width Fix */
+footer.site-footer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer.site-footer * {
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 16px;
+  }
+
+  main.container h1 {
+    font-size: 32px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .banner img {
+    max-height: 300px;
+  }
+
+  button {
+    min-width: 120px;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  body {
+    padding: 0;
+  }
+
+  .container {
+    padding: 24px 16px;
+  }
+
+  main.container h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .banner {
+    margin-bottom: 24px;
+  }
+
+  .banner img {
+    max-height: 200px;
+  }
+
+  .meta {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .badge {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .section p,
+  .section ul li {
+    font-size: 14px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    min-width: unset;
+    text-align: center;
+    padding: 12px 16px;
+  }
+
+  .acc-head {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .acc-head strong {
+    font-size: 15px;
+  }
+
+  .acc-head .muted {
+    font-size: 11px;
+  }
+
+  .acc-body {
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  .accordion {
+    padding-top: 20px;
+    margin-top: 32px;
+  }
+
+  .acc-item {
+    margin-bottom: 12px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 380px) {
+  main.container h1 {
+    font-size: 24px;
+  }
+
+  .section h2 {
+    font-size: 16px;
+  }
+
+  .section p,
+  .section ul li {
+    font-size: 13px;
+  }
+}

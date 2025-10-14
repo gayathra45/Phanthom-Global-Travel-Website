@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Destinations - Phantom Global</title>
+  </head>
+  <body>
+
+    <header>
+    <a href="../main.html" class="brand">
+
+      <img src="../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
+      hanthom Global
+    </a>
+
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="../main.html">Home</a>
+        <a href="../AboutUsPage/index.html">About Us</a>
+        <a href="../Destinations/index.html">Destinations</a>
+        <a href="../ContactUs/contactus1.html">Contact Us</a>
+        <a href="../PlanYourTrip/index.html">Plan Your Trip</a>
+      </div>
+    </div>
+  </header>
+
+<link rel="stylesheet" href="../main.css">
+<script src="../main.js"></script>
+
+    <section class="hero">
+        <div class="overlay">
+            <div class="hero-text">
+                <h1>The right destination for you and your family</h1>
+                <p>Creative taglines have the capability of capturing the attention of potential customer.</p>
+                <a class="btn" href="#package-Australia">Start your search</a>
+
+            </div>
+            <div class="search-box"> 
+                <div class="field">
+                    <label>Location</label>
+                    <select id="country">
+                        <option value="">Select your destination</option>
+                        <option value="package-Australia">Australia</option>
+                        <option value="package-New Zealand">New Zealand</option>
+                        <option value="package-Switzerland">Switzerland</option>
+                        <option value="package-Canada">Canada</option>
+                        <option value="package-United Kingdom">United Kingdom</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Date</label>
+                    <input type="text" id="calendarInput" placeholder="Select date">
+
+                </div>
+                <div class="field">
+                    <label>People</label>
+                    <input type="text" placeholder="How many People?">
+                </div>
+                <button class="btn">Explore Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__container choose__container" id="about">
+      <div class="choose__image">
+        <img src="assets/choose.jpg" alt="choose" />
+      </div>
+      <div class="choose__content">
+        <p class="section__subheader">Why Choose Us?</p>
+        <h2 class="section__header">Plan Your Trip <span>With Us</span></h2>
+        <ul class="choose__list">
+          <li>
+            <span><i class="ri-verified-badge-fill"></i></span>
+            <div>
+              <h4>Best Price Gurantee</h4>
+              <p>
+                We ensure you get the most competitive rates for your travel
+                plans, making your dream destinations affordable.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span><i class="ri-calendar-fill"></i></span>
+            <div>
+              <h4>Booking Options</h4>
+              <p>
+                Experience the ease of flexible booking options tailored to suit
+                your schedule and preferences.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span><i class="ri-road-map-fill"></i></span>
+            <div>
+              <h4>Revising Track Map</h4>
+              <p>
+                Navigate your adventure with our personalized track maps
+                designed for seamless and enjoyable travel experiences.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section__container popular__container" id="package-Australia">
+      <img src="assets/bg.png" alt="bg" class="popular__bg" />
+      <p class="section__subheader">Populer Destinations </p>
+      <h2 class="section__header">Australia</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" >
+            <div class="popular__card" data-link="./Packages/ex/aussie3.html">
+              <img src="./a1.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.0(34)
+                </div>
+                <h4>Bondi Beach</h4>
+                <p><span>$499 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 3 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 20+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>Australia 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/aussie5.html">
+              <img src="./a2.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.5(55)
+                </div>
+                <h4>Tasmania</h4>
+                <p><span>$1099 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 5 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 15+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span> Australia
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/aussie7.html">
+              <img src="./a3.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.2(45)
+                </div>
+                <h4>New South Wales & Victoria</h4>
+                <p><span>$1299 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 7 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 10+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span> Australia
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+      <section class="section__container popular__container" id="package-New Zealand">
+      <img src="assets/bg.png" alt="bg" class="popular__bg" />
+      <p class="section__subheader">Populer Destinations In</p>
+      <h2 class="section__header">New Zealand</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/NZ3.html">
+              <img src="./new1.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.0(34)
+                </div>
+                <h4>Bay of Islands</h4>
+                <p><span>$699 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 4 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 20+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span> New Zealand
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/NZ5.html">
+              <img src="./new2.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.5(55)
+                </div>
+                <h4>Tongariro National Park</h4>
+                <p><span>$1099 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 2 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 15+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span> New Zealand
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/NZ7.html">
+              <img src="./new4.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.2(45)
+                </div>
+                <h4>Queenstown</h4>
+                <p><span>$1299 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 3 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 10+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>  New Zealand
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+      <section class="section__container popular__container" id="package-United Kingdom">
+      <img src="assets/bg.png" alt="bg" class="popular__bg" />
+      <p class="section__subheader">Popular Destinations In</p>
+      <h2 class="section__header"> United Kingdom</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/UK3.html">
+              <img src="./uk1.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <h4>Edinburgh, Scotland</h4>
+                <p><span>$899 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 4 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 20+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span> United Kingdom
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/UK5.html">
+              <img src="./uk2.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.5(55)
+                </div>
+                <h4>Lake District, England</h4>
+                <p><span>$1299 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 2 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 15+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>  United Kingdom
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/UK7.html">
+              <img src="./uk3.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.2(45)
+                </div>
+                <h4>Giant’s Causeway, Northern Ireland</h4>
+                <p><span>$1899 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 3 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 10+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>  United Kingdom
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>  <section class="section__container popular__container" id="package-Canada">
+      <img src="assets/bg.png" alt="bg" class="popular__bg" />
+      <p class="section__subheader">Populer Destinations In</p>
+      <h2 class="section__header">Canada</h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/Canada3.html">
+              <img src="can1.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.0(34)
+                </div>
+                <h4>Banff National Park, Alberta</h4>
+                <p><span>$799 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 4 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 20+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span> Canada
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/Canada5.html">
+              <img src="can2.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.5(55)
+                </div>
+                <h4>Niagara Falls, Ontario</h4>
+                <p><span>$1299 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 2 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 15+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>  Canada
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/Canada7.html">
+              <img src="can3.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.2(45)
+                </div>
+                <h4>Quebec City, Quebec</h4>
+                <p><span>$1899 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 3 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 10+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>Canada
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>  <section class="section__container popular__container" id="package-Switzerland">
+      <img src="assets/bg.png" alt="bg" class="popular__bg" />
+      <p class="section__subheader">Popular Destinations In</p>
+      <h2 class="section__header">Switzerland</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/Switz3.html">
+              <img src="swis1.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.0(34)
+                </div>
+                <h4>Landwasser Viaduct</h4>
+                <p><span>$899 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 4 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 20+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span> Switzerland
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/Switz5.html">
+              <img src="swis2.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.5(55)
+                </div>
+                <h4>Interlaken</h4>
+                <p><span>$1399 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 2 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 15+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>  Switzerland
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="popular__card" data-link="./Packages/ex/Switz7.html">
+              <img src="swis3.jpg" alt="popular" />
+              <div class="popular__content">
+                <div class="popular__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  4.2(45)
+                </div>
+                <h4>Jungfraujoch</h4>
+                <p><span>$1999 </span> Per Person</p>
+                <div class="popular__card__footer">
+                  <div>
+                    <span><i class="ri-time-line"></i></span> 3 Day's
+                  </div>
+                  <div>
+                    <span><i class="ri-group-3-fill"></i></span> 10+
+                  </div>
+                  <div>
+                    <span><i class="ri-map-pin-2-fill"></i></span>  Switzerland
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+
+    <section class="section__container client__container">
+      <img src="assets/bg.png" alt="bg" class="client__bg" />
+      <p class="section__subheader">What Our Client Say's?</p>
+      <h2 class="section__header">Client <span>Testimonials</span></h2>
+      <div class="client__card active">
+        <img src="assets/client-1.jpg" alt="client" />
+        <div class="client__content">
+          <h4>R R R Pesanjith</h4>
+          <h5>Travel Blogger</h5>
+          <p>
+            This travel platform turned my bucket list dreams into reality! The
+            booking process was seamless, and their team provided excellent
+            guidance on must-visit spots. Every step felt effortless, and I
+            can't wait to plan my next adventure with them. Highly recommended!
+          </p>
+        </div>
+      </div>
+      <div class="client__card">
+        <img src="assets/client-2.jpg" alt="client" />
+        <div class="client__content">
+          <h4>Sumudu Sachintha</h4>
+          <h5>Software Engineer</h5>
+          <p>
+            Traveling with this service was a delight! The flexible booking
+            options gave me the freedom to plan at my own pace, and the detailed
+            itineraries ensured I didn't miss anything important. I felt like
+            they genuinely cared about creating the perfect travel experience
+            for me. Absolutely wonderful!
+          </p>
+        </div>
+      </div>
+      <div class="client__card">
+        <img src="assets/client-3.jpg" alt="client" />
+        <div class="client__content">
+          <h4>D D Rambattage</h4>
+          <h5>Photographer</h5>
+          <p>
+            As a photographer, finding picturesque locations is key, and this
+            platform exceeded my expectations. They not only made booking easy
+            but also helped me discover some incredible hidden gems. Their
+            attention to detail made my journey unforgettable and hassle-free!
+          </p>
+        </div>
+      </div>
+      <div class="client__btns">
+        <button class="btn" id="prev">
+          <i class="ri-arrow-left-line"></i>
+        </button>
+        <button class="btn" id="next">
+          <i class="ri-arrow-right-line"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="section__container subscribe__container" id="contact">
+      <h2 class="section__header">
+        Subscribe To Get The Latest News <span>About Us</span>
+      </h2>
+      <p class="section__description">
+        Stay updated with the latest travel deals, destination highlights, and
+        exclusive offers. Subscribe now and never miss out on exciting news and
+        updates about our services!
+      </p>
+      <form action="/">
+        <input type="text" placeholder="Your Email" />
+        <button class="btn">Subscribe</button>
+      </form>
+    </section>
+
+  
+
+      <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+   
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <footer class="site-footer">
+    <div class="footer-top">
+      <div class="logo">
+        <img src="../New folder/logo2.png" alt="Truly Sri Lanka">
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><b>Navigation</b></li>
+          <br>
+          <li><a href="../main.html">Home</a></li>
+          <li><a href="../AboutUsPage/index.html">About Us</a></li>
+          <li><a href="../Destinations/index.html">Destinations</a></li>
+          <li><a href="../ContactUs/contactus1.html">Contact Us</a></li>
+          <li><a href="../PlanYourTrip/index.html">Plan Your Trip</a></li>
+        </ul>
+        <ul>
+          <li><b>Tours</b></li>
+          <br>
+          <li><a href="../Categories/SunandBeach/index.html">Sun and Beach</a></li>
+          <li><a href="../Categories/WildLife/index.html">Wild Life and Safari</a></li>
+          <li><a href="../Categories/Nightlife/index.html">Night Life</a></li>
+          <li><a href="../Categories/Culture/index.html">Heritage and Culture</a></li>
+          <li><a href="../Categories/shopping/index.html">Shopping</a></li>
+          <li><a href="../Categories/Adventure/index.html">Adventure</a></li>
+          <li><a href="../Categories/sightseeing/index.html">Sightseeing</a></li>
+        </ul>
+      </nav>
+      <div class="newsletter">
+        <h2>Newsletter</h2>
+        <p>For the latest updates and special offers</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Enter Your Email" required>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="social-icons">
+
+          <a href="https://www.facebook.com/profile.php?id=100094081238556&mibextid=ZbWKwL" target="_blank"
+            aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg>
+          </a>
+
+          <a href="https://wa.me/94702725683 " target="_blank" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/cart.lanka/?fbclid=IwY2xjawMKSZxleHRuA2FlbQIxMABicmlkETB5V0N1QjNveTd1dGR6T0c2AR7lUbA4C41hRSXgf18AiPKpdcSvGXm5EKuzRQZrplJmboR1jbI5B0Suj8AShA_aem_TLuOxbw9YSJZxfpDpfEpTA#"
+            target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="../Termsandcondition/terms.html">Terms and Conditions</a>
+      <a href="../PrivacyPolicy/index.html">Privacy Policy</a>
+      <a href="../FAQ/index.html">FAQ</a>
+
+    </div>
+
+    <div class="footer-p">
+      <p>Website Designed &amp; Developed by Phanthom Group</p>
+    </div>
+
+    <div class="terms">
+      <h6>© 2025 Phanthom Global, All Rights Reserved</h6>
+    </div>
+
+  </footer>
+    
+  </body>
+</html> 

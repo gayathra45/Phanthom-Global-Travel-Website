@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Australia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
+
+   body {
+    margin: 0;
+    font-family: 'Oswald', Arial, sans-serif; /* Default font */
+    line-height: 1.6;
+    background-color:#ffffff;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', cursive;  /* Fancy font for headings */
+}
+
+.video-container {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    
+    .video-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 4vw;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .about-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.6); 
+    border-radius: 15px;
+    color: #fff; 
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    box-shadow: 0 8px 20px rgba(6, 10, 10, 0.5);
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffd166; 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.about-section p {
+    font-family: 'Oswald';
+    text-indent: 30px; 
+}
+
+    .places {
+        padding: 3rem 2rem;
+        background-color: #fffefe;
+    }
+    .places h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: #080000;
+    }
+    .place-card {
+        background-color: #005758;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .place-image {
+        flex: 1 1 300px;
+        min-height: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+    .place-info {
+        flex: 1 1 300px;
+        padding: 1.5rem;
+    }
+    .place-info h3 {
+        margin-top: 0;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #00f5f5;
+    }
+    .place-info p {
+        line-height: 1.6;
+        color: #ddd;
+        white-space: pre-line;
+        text-align: justify;
+    }
+
+    
+    @media(max-width:768px){
+        .place-card {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+        <header>
+    <a href="../main.html" class="brand">
+
+      <img src="../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
+      hanthom Global
+    </a>
+
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="../main.html">Home</a>
+        <a href="../AboutUsPage/index.html">About Us</a>
+        <a href="../Destinations/index.html">Destinations</a>
+        <a href="../ContactUs/contactus1.html">Contact Us</a>
+        <a href="../PlanYourTrip/index.html">Plan Your Trip</a>
+      </div>
+    </div>
+  </header>
+
+<link rel="stylesheet" href="../main.css">
+<script src="../main.js"></script>
+
+
+<div class="video-container">
+    <video autoplay muted loop>
+        <source src="./AustraliaMainVedio.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-text">
+        <h1>Australia</h1>
+    </div>
+</div>
+
+<div class="about-section">
+    
+    <p>
+        Australia is famous for its unique wildlife, including kangaroos, koalas, wombats, and emus, many of which are native only to the continent. The country has a rich Aboriginal culture, with traditions, art, and languages dating back tens of thousands of years. Australia’s economy is diverse, relying on mining, agriculture, tourism, and services. Major natural landmarks include the Great Barrier Reef, the Outback, Uluru (Ayers Rock), and the Blue Mountains. The country also has vibrant cities with cultural, educational, and sporting attractions, such as Melbourne, known for its arts and coffee culture, and Brisbane, a gateway to the Gold Coast and Sunshine Coast. Australia’s climate varies widely, from tropical in the north to temperate in the south, and it attracts millions of international visitors each year for its natural beauty, adventure activities, and wildlife experiences.
+</div>
+
+
+
+<section class="places">
+    <h2>Best Places to Visit</h2>
+
+    <div class="place-card">
+        <div class="place-image" style="background-image:url('./australia-Sydney.jpeg');"></div>
+        <div class="place-info">
+            <h3>Sydney</h3>
+            <p>Sydney, on the southeastern coast, is Australia’s largest city and a hub of culture, business, and tourism. The Sydney Opera House and Sydney Harbour Bridge are world-famous landmarks. Visitors can take ferry rides across the harbour, explore the historic Rocks district, or relax on Bondi and Manly beaches. Sydney also has thriving arts and cultural scenes at the Art Gallery of New South Wales, the Museum of Contemporary Art, and the Australian Museum. Outdoor activities include coastal walks like the Bondi to Coogee Walk, whale watching, and harbour kayaking.</p>
+        </div>
+    </div>
+
+    <div class="place-card">
+        <div class="place-image" style="background-image: url('./Australia-GreatBarrierReef.jpeg');"></div>
+        <div class="place-info">
+            <h3>Great Barrier Reef</h3>
+            <p>The Great Barrier Reef, off the northeast coast in Queensland, is the world’s largest coral reef system and a UNESCO World Heritage Site. Visitors can snorkel, scuba dive, or take glass-bottom boat tours to see colorful corals, tropical fish, sea turtles, and manta rays. Towns like Cairns and Port Douglas serve as gateways to the reef and nearby tropical rainforests, including the Daintree Rainforest, where guided walks and river cruises offer encounters with native wildlife like crocodiles and cassowaries.</p>
+        </div>
+    </div>
+
+    <div class="place-card">
+        <div class="place-image" style="background-image: url('./AustraliaUluru.jpeg');"></div>
+        <div class="place-info">
+            <h3>Uluru (Ayers Rock)</h3>
+            <p>In the heart of the Northern Territory, Uluru is a massive red sandstone monolith sacred to the Anangu people. Visitors can walk around the base of Uluru, watch the sunrise or sunset that transforms the rock’s colors, and learn about Aboriginal culture at the Cultural Centre. Nearby, the Kata Tjuta (The Olgas) offer dramatic rock formations and hiking trails, including the Valley of the Winds Walk.</p>
+        </div>
+    </div>
+
+    <div class="place-card">
+        <div class="place-image" style="background-image: url('./Autralia-Melborne.jpeg');"></div>
+        <div class="place-info">
+            <h3>Melbourne and Surroundings</h3>
+            <p>Melbourne, in Victoria, is famous for its art, music, food, and coffee culture. Explore the city’s laneways for street art, boutique shops, and cafés, or enjoy cultural venues like the National Gallery of Victoria and the Melbourne Museum. Day trips from Melbourne include the Yarra Valley for wine tasting, the Great Ocean Road for scenic coastal drives and the Twelve Apostles, and Phillip Island to see the famous penguin parade.</p>
+        </div>
+    </div>
+
+    <div class="place-card">
+        <div class="place-image" style="background-image: url('./Australia-Rainforest.jpeg');"></div>
+        <div class="place-info">
+            <h3>Daintree Rainforest and Cape Tribulation</h3>
+            <p>The Daintree Rainforest, part of Queensland’s tropical north, is one of the oldest rainforests in the world. Visitors can hike among ancient trees, spot unique wildlife such as cassowaries, and take river cruises to see saltwater crocodiles. Cape Tribulation, where the rainforest meets the reef, offers guided walks, wildlife spotting, and cultural experiences with local Aboriginal communities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="logo">
+        <img src="../New folder/logo2.png" alt="Truly Sri Lanka">
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><b>Navigation</b></li>
+          <br>
+          <li><a href="../main.html">Home</a></li>
+          <li><a href="../AboutUsPage/index.html">About Us</a></li>
+          <li><a href="../Destinations/index.html">Destinations</a></li>
+          <li><a href="../ContactUs/contactus1.html">Contact Us</a></li>
+          <li><a href="../PlanYourTrip/index.html">Plan Your Trip</a></li>
+        </ul>
+        <ul>
+          <li><b>Tours</b></li>
+          <br>
+          <li><a href="../Categories/SunandBeach/index.html">Sun and Beach</a></li>
+          <li><a href="../Categories/WildLife/index.html">Wild Life and Safari</a></li>
+          <li><a href="../Categories/Nightlife/index.html">Night Life</a></li>
+          <li><a href="../Categories/Culture/index.html">Heritage and Culture</a></li>
+          <li><a href="../Categories/shopping/index.html">Shopping</a></li>
+          <li><a href="../Categories/Adventure/index.html">Adventure</a></li>
+          <li><a href="../Categories/sightseeing/index.html">Sightseeing</a></li>
+        </ul>
+      </nav>
+      <div class="newsletter">
+        <h2>Newsletter</h2>
+        <p>For the latest updates and special offers</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Enter Your Email" required>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="social-icons">
+
+          <a href="https://www.facebook.com/profile.php?id=100094081238556&mibextid=ZbWKwL" target="_blank"
+            aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg>
+          </a>
+
+          <a href="https://wa.me/94702725683 " target="_blank" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/cart.lanka/?fbclid=IwY2xjawMKSZxleHRuA2FlbQIxMABicmlkETB5V0N1QjNveTd1dGR6T0c2AR7lUbA4C41hRSXgf18AiPKpdcSvGXm5EKuzRQZrplJmboR1jbI5B0Suj8AShA_aem_TLuOxbw9YSJZxfpDpfEpTA#"
+            target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="../Termsandcondition/terms.html">Terms and Conditions</a>
+      <a href="../PrivacyPolicy/index.html">Privacy Policy</a>
+      <a href="../FAQ/index.html">FAQ</a>
+
+    </div>
+
+    <div class="footer-p">
+      <p>Website Designed &amp; Developed by Phanthom Group</p>
+    </div>
+
+    <div class="terms">
+      <h6>© 2025 Phanthom Global, All Rights Reserved</h6>
+    </div>
+
+  </footer>
+
+</body>
+</html>

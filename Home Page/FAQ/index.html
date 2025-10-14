@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQs — Phanthom Global</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="../main.html" class="brand">
+
+      <img src="../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
+      hanthom Global
+    </a>
+
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="../main.html">Home</a>
+        <a href="../AboutUsPage/index.html">About Us</a>
+        <a href="../Destinations/index.html">Destinations</a>
+        <a href="../ContactUs/contactus1.html">Contact Us</a>
+        <a href="../PlanYourTrip/index.html">Plan Your Trip</a>
+      </div>
+    </div>
+  </header>
+
+<link rel="stylesheet" href="../main.css">
+<script src="../main.js"></script>
+
+  <div class="banner">
+    <img src="./adventure.jpeg" alt="Phanthom Global Travel Banner">
+  </div>
+
+  <main class="container" id="main">
+
+
+    <h1>Frequently Asked Questions — Phanthom Global</h1>
+    <p class="lead">Quick answers for planning, bookings, cancellations, visas, and travel safety. Can't find something?
+      Use the search box below.</p>
+    </div>
+    </header>
+
+    <div class="controls">
+      <label class="search" for="faq-search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 21l-4.35-4.35" stroke="#0b0b0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            opacity="0.6" />
+        </svg>
+        <input id="faq-search" type="search" placeholder="Search FAQ" aria-label="Search FAQs">
+      </label>
+      <button id="expandAll" class="btn ghost" title="Expand all">Expand all</button>
+      <button id="contactBtn" class="btn" title="Contact support">Contact support</button>
+    </div>
+
+    <div class="tip" role="note">
+      <strong>Pro tip:</strong> Use keywords like destination name (e.g., "Maldives"), booking reference or
+      "cancellation" to quickly filter related answers.
+    </div>
+
+    <section class="faq-list" id="faqList" aria-live="polite">
+
+      <!-- Example FAQ items -->
+      <!-- FAQ items -->
+      <article class="faq" data-tags="booking payment refund" id="f1"> <button class="trigger" aria-expanded="false"
+          aria-controls="a1"> <span>
+            <div class="q">How do I make or modify a booking?</div>
+            <div class="meta">Online bookings, phone support</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a1">
+          <p>To book: choose a package, select dates and passenger details, then complete payment on the checkout page.
+            To modify an existing booking, sign in and go to <em>My Trips</em>, or contact our support with your booking
+            reference.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="payment refund policy" id="f2"> <button class="trigger" aria-expanded="false"
+          aria-controls="a2"> <span>
+            <div class="q">What payment methods do you accept?</div>
+            <div class="meta">Credit card, debit card, and online wallets</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a2">
+          <p>We accept major credit/debit cards and many regional online wallets. If you prefer bank transfers or need a
+            pro-forma invoice, contact support and provide your preferred currency and country.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="cancellation refund policy" id="f3"> <button class="trigger" aria-expanded="false"
+          aria-controls="a3"> <span>
+            <div class="q">How do cancellations and refunds work?</div>
+            <div class="meta">Depends on package terms</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a3">
+          <p>Cancellation rules depend on the supplier and package. Some bookings are non-refundable, others may offer
+            partial refunds depending on timing. Check your booking confirmation for exact terms or reach out to support
+            with your booking reference for an eligibility check.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="visa documents entry requirements" id="f4"> <button class="trigger"
+          aria-expanded="false" aria-controls="a4"> <span>
+            <div class="q">Do you handle visa applications?</div>
+            <div class="meta">Visa advice & third-party services</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a4">
+          <p>We provide guidance and offer optional visa facilitation through trusted partners for select destinations.
+            We recommend checking embassy websites for the most current rules—visa policies change frequently.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="baggage luggage allowance" id="f5"> <button class="trigger" aria-expanded="false"
+          aria-controls="a5"> <span>
+            <div class="q">What is the baggage allowance?</div>
+            <div class="meta">Airline-dependent</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a5">
+          <p>Baggage rules vary by airline and fare class. Please check the airline section in your e-ticket or contact
+            us with your flight number and we'll confirm the allowance.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="covid travel insurance safety" id="f6"> <button class="trigger"
+          aria-expanded="false" aria-controls="a6"> <span>
+            <div class="q">Do I need travel insurance?</div>
+            <div class="meta">Strongly recommended</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a6">
+          <p>Yes — we strongly recommend travel insurance covering medical expenses, trip cancellation, and baggage
+            loss. Some countries require proof of insurance for entry; verify requirements before departure.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="special requests accessibility meals" id="f7"> <button class="trigger"
+          aria-expanded="false" aria-controls="a7"> <span>
+            <div class="q">Can I request special meals or accessibility assistance?</div>
+            <div class="meta">Yes — early notice helps</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a7">
+          <p>We can submit requests for dietary needs and accessibility assistance to hotels and airlines, but approval
+            is subject to supplier policies. Please include requests when booking or contact support at least 72 hours
+            before travel.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="children infants family discounts" id="f8"> <button class="trigger"
+          aria-expanded="false" aria-controls="a8"> <span>
+            <div class="q">Are there discounts for children or groups?</div>
+            <div class="meta">Varies by supplier</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a8">
+          <p>Child and group discounts depend on the airline, hotel or tour operator. For group requests (usually 6+
+            guests) please contact our group desk in advance for a custom quote.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="payments currency exchange" id="f9"> <button class="trigger" aria-expanded="false"
+          aria-controls="a9"> <span>
+            <div class="q">Can I pay in my local currency?</div>
+            <div class="meta">Depends on package pricing</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a9">
+          <p>Some packages are priced in multiple currencies. If you need invoicing in a specific currency, contact
+            support before payment and we'll advise whether that's possible for your booking.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="pets animal travel" id="f10"> <button class="trigger" aria-expanded="false"
+          aria-controls="a10"> <span>
+            <div class="q">Can I travel with my pet?</div>
+            <div class="meta">Subject to airline & destination rules</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a10">
+          <p>Pets are allowed on some flights and in certain hotels. Rules differ widely (vaccination, crates,
+            documentation). Contact us early so we can check options and make necessary arrangements.</p>
+        </div>
+      </article>
+      <article class="faq" data-tags="emergency contact local support" id="f11"> <button class="trigger"
+          aria-expanded="false" aria-controls="a11"> <span>
+            <div class="q">What if I have an emergency while traveling?</div>
+            <div class="meta">24/7 local assistance</div>
+          </span> <span class="chev" aria-hidden="true">+</span> </button>
+        <div class="ans" id="a11">
+          <p>Call the emergency support number on your itinerary. We provide 24/7 assistance for urgent issues like
+            medical help, lost passports, or missed connections.</p>
+        </div>
+      </article>
+      
+      <!-- Add rest of FAQs here (same as your original code) -->
+
+    </section>
+
+  </main>
+
+    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+
+
+    <footer class="site-footer">
+    <div class="footer-top">
+      <div class="logo">
+        <img src="../New folder/logo2.png" alt="Truly Sri Lanka">
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><b>Navigation</b></li>
+          <br>
+          <li><a href="../main.html">Home</a></li>
+          <li><a href="../AboutUsPage/index.html">About Us</a></li>
+          <li><a href="../Destinations/index.html">Destinations</a></li>
+          <li><a href="../ContactUs/contactus1.html">Contact Us</a></li>
+          <li><a href="../PlanYourTrip/index.html">Plan Your Trip</a></li>
+        </ul>
+        <ul>
+          <li><b>Tours</b></li>
+          <br>
+          <li><a href="../Categories/SunandBeach/index.html">Sun and Beach</a></li>
+          <li><a href="../Categories/WildLife/index.html">Wild Life and Safari</a></li>
+          <li><a href="../Categories/Nightlife/index.html">Night Life</a></li>
+          <li><a href="../Categories/Culture/index.html">Heritage and Culture</a></li>
+          <li><a href="../Categories/shopping/index.html">Shopping</a></li>
+          <li><a href="../Categories/Adventure/index.html">Adventure</a></li>
+          <li><a href="../Categories/sightseeing/index.html">Sightseeing</a></li>
+        </ul>
+      </nav>
+      <div class="newsletter">
+        <h2>Newsletter</h2>
+        <p>For the latest updates and special offers</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Enter Your Email" required>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="social-icons">
+
+          <a href="https://www.facebook.com/profile.php?id=100094081238556&mibextid=ZbWKwL" target="_blank"
+            aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg>
+          </a>
+
+          <a href="https://wa.me/94702725683 " target="_blank" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/cart.lanka/?fbclid=IwY2xjawMKSZxleHRuA2FlbQIxMABicmlkETB5V0N1QjNveTd1dGR6T0c2AR7lUbA4C41hRSXgf18AiPKpdcSvGXm5EKuzRQZrplJmboR1jbI5B0Suj8AShA_aem_TLuOxbw9YSJZxfpDpfEpTA#"
+            target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="../Termsandcondition/terms.html">Terms and Conditions</a>
+      <a href="../PrivacyPolicy/index.html">Privacy Policy</a>
+      <a href="../FAQ/index.html">FAQ</a>
+
+    </div>
+
+    <div class="footer-p">
+      <p>Website Designed &amp; Developed by Phanthom Group</p>
+    </div>
+
+    <div class="terms">
+      <h6>© 2025 Phanthom Global, All Rights Reserved</h6>
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
