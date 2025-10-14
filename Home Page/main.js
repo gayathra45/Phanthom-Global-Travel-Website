@@ -128,3 +128,5 @@ document.querySelectorAll(".footer-nav ul").forEach(ul => {
     ul.classList.toggle("active");
   });
 });
+
+

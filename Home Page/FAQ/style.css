@@ -232,3 +232,22 @@ p.lead {
   }
 
 }
+
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.4s ease;
+  z-index: 9999;
+  background-color: none;
+  box-shadow: none;
+}
+
+header.hide-nav {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 100px;
+}

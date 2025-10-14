@@ -22,8 +22,14 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6, .logo {
-  font-family:  'Oswald';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: 'Oswald';
 }
 
 
@@ -314,6 +320,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -526,21 +533,22 @@ body {
     margin-top: 0;
   }
 
-  }
-
-  
+}
 
 
 
 
 
-  
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
 }
+
 body {
   background: white;
   color: black;
@@ -588,6 +596,7 @@ body {
   font-size: 14px;
   transition: 0.3s;
 }
+
 .btn:hover {
   background: rgba(0, 255, 251, 0.612);
   color: black;
@@ -605,7 +614,7 @@ body {
   border-radius: 12px;
   margin-top: 40px;
   max-width: 950px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .search-box .field {
@@ -639,9 +648,11 @@ body {
   .hero-text h1 {
     font-size: 32px;
   }
+
   .hero-text p {
     font-size: 14px;
   }
+
   .search-box {
     max-width: 100%;
   }
@@ -696,9 +707,11 @@ body {
   .hero-text h1 {
     font-size: 22px;
   }
+
   .hero-text p {
     font-size: 13px;
   }
+
   .search-box {
     padding: 15px;
   }
@@ -750,6 +763,7 @@ body {
   font-size: 14px;
   transition: 0.3s;
 }
+
 .btn:hover {
   background: rgba(0, 255, 251, 0.612);
   color: black;
@@ -768,7 +782,7 @@ body {
   flex-wrap: wrap;
   margin-top: 40px;
   max-width: 950px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .search-box .field {
@@ -802,9 +816,11 @@ body {
   .hero-text h1 {
     font-size: 32px;
   }
+
   .hero-text p {
     font-size: 14px;
   }
+
   .search-box {
     max-width: 100%;
   }
@@ -859,9 +875,11 @@ body {
   .hero-text h1 {
     font-size: 22px;
   }
+
   .hero-text p {
     font-size: 13px;
   }
+
   .search-box {
     padding: 15px;
   }
@@ -944,11 +962,14 @@ body {
 
 
 .hero .overlay {
- 
+
   flex-direction: column;
-  align-items: left; /* horizontal center */
-  justify-content: left; /* vertical center */
-  text-align: left;    /* text alignment */
+  align-items: left;
+  /* horizontal center */
+  justify-content: left;
+  /* vertical center */
+  text-align: left;
+  /* text alignment */
   padding-left: 100px;
 }
 
@@ -977,4 +998,21 @@ body {
   }
 }
 
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.4s ease;
+  z-index: 9999;
+  background-color: none;
+  box-shadow: none;
+}
 
+header.hide-nav {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 100px;
+}

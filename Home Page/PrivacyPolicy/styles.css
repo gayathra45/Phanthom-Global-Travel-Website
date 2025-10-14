@@ -27,7 +27,8 @@ button,
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -65,7 +66,7 @@ body {
   margin-left: -50vw;
   margin-right: -50vw;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .banner img {
@@ -86,11 +87,34 @@ main.container h1 {
   line-height: 1.2;
 }
 
-main.container > p.muted {
+main.container>p.muted {
   margin: 0 0 16px 0;
   color: var(--muted);
   font-size: 14px;
 }
+
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.4s ease;
+  z-index: 9999;
+  background-color: none;
+  box-shadow: none;
+}
+
+header.hide-nav {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 100px;
+}
+
+
+
+
 
 /* Badges */
 .meta {
@@ -187,21 +211,21 @@ button:active {
 
 /* Cookie Status */
 #cookieStatus {
-  margin-top: 12px;
+  margin-top: 1px;
   display: block;
 }
 
 /* Accordion */
 .accordion {
   border-top: 2px solid var(--sky);
-  padding-top: 24px;
-  margin-top: 40px;
+  padding-top: 2px;
+  margin-top: 4px;
 }
 
 .acc-item {
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 16px;
+  margin-bottom: 1px;
   border: 1px solid #e5e7eb;
   background: #fff;
   transition: all 0.2s ease;
@@ -278,7 +302,7 @@ a:hover {
 }
 
 /* Last Updated */
-main.container > p.muted:last-of-type {
+main.container>p.muted:last-of-type {
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid #e5e7eb;

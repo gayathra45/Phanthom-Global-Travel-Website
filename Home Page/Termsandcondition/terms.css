@@ -7,7 +7,8 @@ body {
 
 header {
   position: relative;
-  z-index: 2000; /* higher than terms box */
+  z-index: 2000;
+  /* higher than terms box */
 }
 
 input:focus,
@@ -19,117 +20,160 @@ button:focus {
 
 
 .termsAndConditions {
-  margin: 100px auto 50px auto; /* leaves space for navbar */
+  margin: 100px auto 50px auto;
+  /* leaves space for navbar */
   width: 90%;
   max-width: 1300px;
   background-color: #fff;
   border-radius: 3px;
   padding: 20px;
-  z-index: 1000; /* stays below header */
+  z-index: 1000;
+  /* stays below header */
 }
 
 
-.termsAndConditionsHeading{
+.termsAndConditionsHeading {
   margin-top: 70px;
   margin-bottom: 30px;
   font-size: 32px;
 }
 
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.4s ease;
+  z-index: 9999;
+  background-color: none;
+  box-shadow: none;
+}
+
+header.hide-nav {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 100px;
+}
+
+
+
+
+
 .spangleWelcome {
   font-family: "Caveat", cursive;
-  font-weight: 600; 
+  font-weight: 600;
   font-style: normal;
   font-size: large;
   color: rgb(40, 143, 143);
 }
 
 
-.termsParagraphIntro{
+.termsParagraphIntro {
   margin-left: 15px;
   margin-right: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.spangleWelcome{
+
+.spangleWelcome {
   font-weight: 500;
 }
-.serviceLeadingSection{
+
+.serviceLeadingSection {
   width: 80%;
   margin-top: 15px;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
-.sn{
+
+.sn {
   font-size: 32px;
   padding-right: 5px;
 }
-.st{
+
+.st {
   font-size: 32px;
 }
-.spl{
+
+.spl {
   margin-top: 15px;
   margin-bottom: 15px;
 
 }
-.serviceInfoContainer{
-  position:relative;
-  width: 100%;    
+
+.serviceInfoContainer {
+  position: relative;
+  width: 100%;
 }
-.serviceLead{
+
+.serviceLead {
   font-weight: 700;
-  margin-left: 15px;  
+  margin-left: 15px;
   margin-top: 15px;
-  margin-block-end: 5px;  
+  margin-block-end: 5px;
 
 }
-.serviceDetails{
+
+.serviceDetails {
   margin-left: 15px;
 }
 
-.displayNone{
-  display:none;
+.displayNone {
+  display: none;
 }
-.secionLine{
-  height: 40px;
-  width:5px;
 
-  position:absolute;
-  top:7px;
+.secionLine {
+  height: 40px;
+  width: 5px;
+
+  position: absolute;
+  top: 7px;
 }
+
 /*Font Colours below*/
-.lightGreen{
+.lightGreen {
   color: rgb(5, 167, 167);
 }
-.blue{
+
+.blue {
   color: rgb(5, 167, 167);
 }
-.orange{
-  color:rgb(5, 167, 167);
+
+.orange {
+  color: rgb(5, 167, 167);
 }
-.purple{
+
+.purple {
   color: rgb(5, 167, 167);
 }
 
 /*Set the colours for the lines*/
 
-.lineColorGreen{
+.lineColorGreen {
   background-image: linear-gradient(to right bottom, rgb(255, 255, 255), rgb(0, 255, 204));
 }
-.lineColorBlue{
+
+.lineColorBlue {
   background-image: linear-gradient(to right bottom, rgb(255, 255, 255), rgb(0, 255, 204));
 }
-.lineColorOrange{
+
+.lineColorOrange {
   background-image: linear-gradient(to right bottom, rgb(255, 255, 255), rgb(0, 255, 204));
 }
-.lineColorPurple{
+
+.lineColorPurple {
   background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(0, 255, 204))
 }
-.closeTerms{
+
+.closeTerms {
   border-bottom: 1px solid black;
   margin-top: 15px;
   margin-bottom: 15px;
   padding-bottom: 5px;
 }
-.fadeIn{
+
+.fadeIn {
   animation-name: fadeIn;
   animation-duration: .8s;
   animation-timing-function: ease-out;
@@ -139,12 +183,13 @@ button:focus {
 
 
 
-@keyframes fadeIn{
+@keyframes fadeIn {
   0% {
 
     opacity: 0;
   }
-  100%{
+
+  100% {
 
     opacity: 1;
   }
@@ -164,5 +209,6 @@ button:focus {
 }
 
 .termsAndConditions {
-  margin: 20px auto 50px auto; /* smaller gap below banner */
+  margin: 20px auto 50px auto;
+  /* smaller gap below banner */
 }

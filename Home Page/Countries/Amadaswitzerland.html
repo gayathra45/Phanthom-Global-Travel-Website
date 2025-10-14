@@ -1,130 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Discover Swizerland</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Swizerland</title>
+  <link rel="icon" href="../New folder/Favicon (2).png" type="image/png">
 
-   body {
-    margin: 0;
-    font-family: 'Oswald', Arial, sans-serif; /* Default font */
-    line-height: 1.6;
-    background-color:#ffffff;
-    color: #fff;
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
 
-h1, h2, h3 {
-    font-family: 'Oswald', cursive;  /* Fancy font for headings */
-}
+    body {
+      margin: 0;
+      font-family: 'Oswald', Arial, sans-serif;
+      /* Default font */
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #fff;
+    }
 
-.video-container {
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        overflow: hidden;
+    h1,
+    h2,
+    h3 {
+      font-family: 'Oswald', cursive;
+      /* Fancy font for headings */
+    }
+
+    header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: transform 0.4s ease;
+      z-index: 9999;
+      background-color: none;
+      box-shadow: none;
+    }
+
+    header.hide-nav {
+      transform: translateY(-100%);
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+
+
+
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
     }
 
     .video-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    
+
     .video-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 4vw;
-        font-weight: bold;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        text-align: center;
-        max-width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 4vw;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      max-width: 90%;
     }
 
     .about-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px 20px;
-    background: rgba(0, 0, 0, 0.6); 
-    border-radius: 15px;
-    color: #fff; 
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
-    box-shadow: 0 8px 20px rgba(6, 10, 10, 0.5);
-}
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      box-shadow: 0 8px 20px rgba(6, 10, 10, 0.5);
+    }
 
-.about-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffd166; 
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-}
+    .about-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffd166;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
 
-.about-section p {
-    font-family: 'Oswald';
-    text-indent: 30px; 
-}
+    .about-section p {
+      font-family: 'Oswald';
+      text-indent: 30px;
+    }
 
     .places {
-        padding: 3rem 2rem;
-        background-color: #fffefe;
-    }
-    .places h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-        color: #080000;
-    }
-    .place-card {
-        background-color: #005758;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    .place-image {
-        flex: 1 1 300px;
-        min-height: 250px;
-        background-size: cover;
-        background-position: center;
-    }
-    .place-info {
-        flex: 1 1 300px;
-        padding: 1.5rem;
-    }
-    .place-info h3 {
-        margin-top: 0;
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: #00f5f5;
-    }
-    .place-info p {
-        line-height: 1.6;
-        color: #ddd;
-        white-space: pre-line;
-        text-align: justify;
+      padding: 3rem 2rem;
+      background-color: #fffefe;
     }
 
-    
-    @media(max-width:768px){
-        .place-card {
-            flex-direction: column;
-        }
+    .places h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #080000;
     }
-</style>
+
+    .place-card {
+      background-color: #005758;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .place-image {
+      flex: 1 1 300px;
+      min-height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .place-info {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+    }
+
+    .place-info h3 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00f5f5;
+    }
+
+    .place-info p {
+      line-height: 1.6;
+      color: #ddd;
+      white-space: pre-line;
+      text-align: justify;
+    }
+
+
+    @media(max-width:768px) {
+      .place-card {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-        <header>
+  <header>
     <a href="../main.html" class="brand">
 
       <img src="../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -147,75 +184,99 @@ h1, h2, h3 {
     </div>
   </header>
 
-<link rel="stylesheet" href="../main.css">
-<script src="../main.js"></script>
+  <link rel="stylesheet" href="../main.css">
+  <script src="../main.js"></script>
 
 
-<div class="video-container">
+  <div class="video-container">
     <video autoplay muted loop>
-        <source src="./siwizerlandVedio.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+      <source src="./siwizerlandVedio.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div class="video-text">
-        <h1>Switzerland</h1>
+      <h1>Switzerland</h1>
     </div>
-</div>
+  </div>
 
-<div class="about-section">
-    
-    <p>Switzerland is a small but beautiful country in Central Europe, surrounded by Germany, France, Italy, Austria, and Liechtenstein. It is well known for the Swiss Alps, peaceful lakes, green valleys, and famous products like chocolate and watches. The capital is Bern, while Zurich is the largest city, and the country has four official languages: German, French, Italian, and Romansh. Switzerland’s economy is strong, with banking, tourism, and high-quality industries playing important roles. Popular attractions include the Matterhorn, Lake Geneva, Jungfrau region, and ski resorts like Zermatt. With its mix of natural beauty and cultural diversity, Switzerland is a popular destination all year round.</p>
-        
-</div>
+  <div class="about-section">
+
+    <p>Switzerland is a small but beautiful country in Central Europe, surrounded by Germany, France, Italy, Austria,
+      and Liechtenstein. It is well known for the Swiss Alps, peaceful lakes, green valleys, and famous products like
+      chocolate and watches. The capital is Bern, while Zurich is the largest city, and the country has four official
+      languages: German, French, Italian, and Romansh. Switzerland’s economy is strong, with banking, tourism, and
+      high-quality industries playing important roles. Popular attractions include the Matterhorn, Lake Geneva, Jungfrau
+      region, and ski resorts like Zermatt. With its mix of natural beauty and cultural diversity, Switzerland is a
+      popular destination all year round.</p>
+
+  </div>
 
 
-<section class="places">
+  <section class="places">
     <h2>Best Places to Visit</h2>
 
     <div class="place-card">
-        <div class="place-image" style="background-image:url('./Lucerneswizland.jpg');"></div>
-        <div class="place-info">
-            <h3>Lucerne</h3>
-            <p>Between its breathtaking landscapes, rich history, and host of attractions, it’s one of the top 10 places to visit in Switzerland for sure. It’s a city that should be on every backpacker’s itinerary.Among many other things, you can look forward to exploring the iconic Kapellbrücke (Chapel Bridge), marvelling at the Lion Monument, and strolling the boisterous, cobblestone streets of the city’s historic Old Town.The city also offers plenty of budget-friendly options for accommodation, like hostels and guesthouses, along with a variety of affordable dining options, for budget backpackers looking to savour Swiss cuisine.</p>
-        </div>
+      <div class="place-image" style="background-image:url('./Lucerneswizland.jpg');"></div>
+      <div class="place-info">
+        <h3>Lucerne</h3>
+        <p>Between its breathtaking landscapes, rich history, and host of attractions, it’s one of the top 10 places to
+          visit in Switzerland for sure. It’s a city that should be on every backpacker’s itinerary.Among many other
+          things, you can look forward to exploring the iconic Kapellbrücke (Chapel Bridge), marvelling at the Lion
+          Monument, and strolling the boisterous, cobblestone streets of the city’s historic Old Town.The city also
+          offers plenty of budget-friendly options for accommodation, like hostels and guesthouses, along with a variety
+          of affordable dining options, for budget backpackers looking to savour Swiss cuisine.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./GenevaSwitzerland.jpg');"></div>
-        <div class="place-info">
-            <h3>Geneva</h3>
-            <p>Discover the cosmopolitan Geneva, which, among many other things, has earned a well-deserved title as a diplomatic hub and cultural centre. The area consistently seduces travellers with its historical sites, unspoiled natural beauty, and vibrant life force. Be sure to pick up the Geneva Transport Card if you decide to visit, you can get it at most accommodations. It’ll allow you to enjoy unlimited travel on buses, trams, and even boats across the lake, making it easy to explore the city on a budget.
+      <div class="place-image" style="background-image: url('./GenevaSwitzerland.jpg');"></div>
+      <div class="place-info">
+        <h3>Geneva</h3>
+        <p>Discover the cosmopolitan Geneva, which, among many other things, has earned a well-deserved title as a
+          diplomatic hub and cultural centre. The area consistently seduces travellers with its historical sites,
+          unspoiled natural beauty, and vibrant life force. Be sure to pick up the Geneva Transport Card if you decide
+          to visit, you can get it at most accommodations. It’ll allow you to enjoy unlimited travel on buses, trams,
+          and even boats across the lake, making it easy to explore the city on a budget.
 
-</p>
-        </div>
+        </p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./Ticino’s\ Lake\ District\ Swizland.jpg');"></div>
-        <div class="place-info">
-            <h3>Ticino’s Lake District</h3>
-            <p>Not only does it offer bewitching scenery and surplus opportunities for swimming and hiking, but it also scintillates with gastronomical adventures through Italian-influenced cuisine. The lovely surrounding mountains and lakeside towns, like Morcote and Gandria, only add to the charm..</p>
-        </div>
+      <div class="place-image" style="background-image: url('./Ticino’s\ Lake\ District\ Swizland.jpg');"></div>
+      <div class="place-info">
+        <h3>Ticino’s Lake District</h3>
+        <p>Not only does it offer bewitching scenery and surplus opportunities for swimming and hiking, but it also
+          scintillates with gastronomical adventures through Italian-influenced cuisine. The lovely surrounding
+          mountains and lakeside towns, like Morcote and Gandria, only add to the charm..</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./Valle\ VerzascaSwizland.jpg');"></div>
-        <div class="place-info">
-            <h3>Valle Verzasca</h3>
-            <p>Stowed away in the south of Switzerland lies the enchanting Valle Verzasca, a hidden gem known for its homely riverbanks, astounding stone bridges, and lush greenery. Take a revitalizing dip in its crystalline waters or hike through the scenic mountains free of charge.If you’re brave, you could even give bungee jumping a bash.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./Valle\ VerzascaSwizland.jpg');"></div>
+      <div class="place-info">
+        <h3>Valle Verzasca</h3>
+        <p>Stowed away in the south of Switzerland lies the enchanting Valle Verzasca, a hidden gem known for its homely
+          riverbanks, astounding stone bridges, and lush greenery. Take a revitalizing dip in its crystalline waters or
+          hike through the scenic mountains free of charge.If you’re brave, you could even give bungee jumping a bash.
+        </p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./AppenzellSwizland.jpg');"></div>
-        <div class="place-info">
-            <h3>Appenzell</h3>
-            <p>The town’s history is deeply rooted in Swiss traditions and customs. It’s earned a well-deserved reputation for its unique folk art and music. And a great way to experience its enthralling local culture first-hand is by paying a visit to the Appenzell Museum or folk festivals, for a deeper understanding of its history and customs.I was positively enthralled by the breathtaking vistas, lakes, and majestic mountain peaks I spotted while hiking in the iconic Alpstein area. I’d suggest it to anyone visiting.
-</p>
-        </div>
+      <div class="place-image" style="background-image: url('./AppenzellSwizland.jpg');"></div>
+      <div class="place-info">
+        <h3>Appenzell</h3>
+        <p>The town’s history is deeply rooted in Swiss traditions and customs. It’s earned a well-deserved reputation
+          for its unique folk art and music. And a great way to experience its enthralling local culture first-hand is
+          by paying a visit to the Appenzell Museum or folk festivals, for a deeper understanding of its history and
+          customs.I was positively enthralled by the breathtaking vistas, lakes, and majestic mountain peaks I spotted
+          while hiking in the iconic Alpstein area. I’d suggest it to anyone visiting.
+        </p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
@@ -303,5 +364,31 @@ h1, h2, h3 {
 
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
+
 </body>
+
 </html>

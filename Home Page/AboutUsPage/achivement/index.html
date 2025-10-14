@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Honoring Excellence and Achievement - Phantom Global</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../New folder/Favicon (2).png" type="image/png">
   <style>
     body {
       margin: 0;
@@ -12,6 +14,29 @@
       background-color: #ffffff;
       color: #000000;
     }
+
+    header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: transform 0.4s ease;
+      z-index: 9999;
+      background-color: none;
+      box-shadow: none;
+    }
+
+    header.hide-nav {
+      transform: translateY(-100%);
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+
+
+
 
     /* Banner */
     .banner {
@@ -29,7 +54,7 @@
       font-size: 42px;
       text-align: center;
       padding: 0 15px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     /* Section */
@@ -40,7 +65,8 @@
     }
 
     .section h2 {
-      color: #00ffee; /* sky blue */
+      color: #00ffee;
+      /* sky blue */
       font-size: 36px;
       margin-bottom: 20px;
       text-align: center;
@@ -63,11 +89,12 @@
     }
 
     .card {
-      background-color: #f0f8ff; /* light sky-blue tint */
+      background-color: #f0f8ff;
+      /* light sky-blue tint */
       border-radius: 10px;
       overflow: hidden;
       width: 300px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
     }
 
@@ -112,54 +139,53 @@
     }
 
     /* Mobile Responsive */
-@media (max-width: 768px) {
-  .banner {
-    height: 200px;
-  }
+    @media (max-width: 768px) {
+      .banner {
+        height: 200px;
+      }
 
-  .banner h1 {
-    font-size: 32px;
-    text-align: center;
-    padding: 0 10px;
-  }
+      .banner h1 {
+        font-size: 32px;
+        text-align: center;
+        padding: 0 10px;
+      }
 
-  .section {
-    padding: 30px 15px;
-  }
+      .section {
+        padding: 30px 15px;
+      }
 
-  .section h2 {
-    font-size: 28px;
-  }
+      .section h2 {
+        font-size: 28px;
+      }
 
-  .section p {
-    font-size: 16px;
-    max-width: 100%;
-  }
+      .section p {
+        font-size: 16px;
+        max-width: 100%;
+      }
 
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .card {
-    width: 90%;
-  }
+      .card {
+        width: 90%;
+      }
 
-  .card-content h3 {
-    font-size: 20px;
-  }
+      .card-content h3 {
+        font-size: 20px;
+      }
 
-  .card-content p {
-    font-size: 14px;
-  }
-}
-
-
+      .card-content p {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-    <header>
+  <header>
     <a href="../../main.html" class="brand">
 
       <img src="../../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -182,8 +208,8 @@
     </div>
   </header>
 
-<link rel="stylesheet" href="../../main.css">
-<script src="../../main.js"></script>
+  <link rel="stylesheet" href="../../main.css">
+  <script src="../../main.js"></script>
 
   <!-- Banner -->
   <div class="banner">
@@ -193,7 +219,9 @@
   <!-- Intro -->
   <div class="section">
     <h2>Celebrating Success</h2>
-    <p>At Phantom Global, we believe in recognizing milestones, celebrating partnerships, and honoring excellence across every journey. Our achievements reflect our dedication to creating remarkable travel experiences and building trust worldwide.</p>
+    <p>At Phantom Global, we believe in recognizing milestones, celebrating partnerships, and honoring excellence across
+      every journey. Our achievements reflect our dedication to creating remarkable travel experiences and building
+      trust worldwide.</p>
   </div>
 
   <!-- Achievements -->
@@ -202,7 +230,9 @@
     <div class="card-container">
 
       <div class="card">
-        <img src="https://media.istockphoto.com/id/1295484250/photo/group-of-trophies-in-a-row.jpg?s=612x612&w=0&k=20&c=ClctkXMznkcYVdBCZrvUTvAsTBEV5Jt4FtOmr0XuYNQ=" alt="Awards">
+        <img
+          src="https://media.istockphoto.com/id/1295484250/photo/group-of-trophies-in-a-row.jpg?s=612x612&w=0&k=20&c=ClctkXMznkcYVdBCZrvUTvAsTBEV5Jt4FtOmr0XuYNQ="
+          alt="Awards">
         <div class="card-content">
           <h3>Awards</h3>
           <p>Recognized globally for outstanding service and excellence in the travel industry.</p>
@@ -210,7 +240,8 @@
       </div>
 
       <div class="card">
-        <img src="https://s35804.pcdn.co/blog/wp-content/uploads/2020/12/mark_collaboration_through_partnerships.png" alt="Partnerships">
+        <img src="https://s35804.pcdn.co/blog/wp-content/uploads/2020/12/mark_collaboration_through_partnerships.png"
+          alt="Partnerships">
         <div class="card-content">
           <h3>Partnerships</h3>
           <p>We partner with trusted global brands to ensure world-class travel experiences.</p>
@@ -218,7 +249,8 @@
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Client Success">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+          alt="Client Success">
         <div class="card-content">
           <h3>Client Success</h3>
           <p>Thousands of happy travelers worldwide trust us to make their journeys exceptional.</p>
@@ -228,12 +260,12 @@
     </div>
   </div>
 
-    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">
         <img src="../../New folder/logo2.png" alt="Truly Sri Lanka">
@@ -316,6 +348,32 @@
 
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
+
 
 </body>
+
 </html>

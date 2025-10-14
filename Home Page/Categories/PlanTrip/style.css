@@ -1,368 +1,427 @@
- 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
 
-    body{
-    font-family:'Oswald',sans-serif;
-    background:#fff;
-    color:#111;
-  }
+ body {
+   font-family: 'Oswald', sans-serif;
+   background: #fff;
+   color: #111;
+ }
 
-    /* HERO */
-    .hero{
-      min-height:360px;
-      background:url('https://img.freepik.com/free-photo/man-with-backpack-strolling-by-beach-fluffy-clouds_1258-296115.jpg?semt=ais_incoming&w=740&q=80') center/cover no-repeat;
-      position:relative;
-      display:flex;
-      align-items:center
-    }
-    .hero::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(90deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.15) 60%);
-    }
-    .hero-inner{
-      position:relative;
-      z-index:2;
-      max-width:1200px;
-      margin:40px auto;
-      padding:48px 24px;
-      color:#fff
-    }
-    .hero h1{
-      font-size:64px;
-      letter-spacing:3px;
-      margin-bottom:12px;
-      font-weight:600
-    }
-    .hero p{
-      max-width:800px;
-      font-size:18px;
-      line-height:1.4;
-      opacity:0.95;
-      font-weight:300
-    }
+ header {
+   position: fixed !important;
+   top: 0;
+   left: 0;
+   width: 100%;
+   transition: transform 0.4s ease;
+   z-index: 9999;
+   background-color: none;
+   box-shadow: none;
+ }
 
-    /* LAYOUT */
-    .container{
-      max-width:1100px;
-      margin:40px auto;
-      padding:0 24px;
-    }
+ header.hide-nav {
+   transform: translateY(-100%);
+ }
 
-    /* FORM - with background image */
-    form{display:block;
-      padding:30px;
-      border-radius:8px;
-    }
+ body {
+   padding-top: 100px;
+ }
 
-    form::before{
-      content:'';
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      bottom:0;
-      background:rgba(255,255,255,0.92);
-      z-index:-1;
-    }
 
-    .form-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:35px;
-    
-    }
+ /* HERO */
+ .hero {
+   min-height: 360px;
+   background: url('https://img.freepik.com/free-photo/man-with-backpack-strolling-by-beach-fluffy-clouds_1258-296115.jpg?semt=ais_incoming&w=740&q=80') center/cover no-repeat;
+   position: relative;
+   display: flex;
+   align-items: center
+ }
 
-    @media (max-width:920px){
-      .form-grid{grid-template-columns:repeat(2,1fr)} 
-    }
-    @media (max-width:640px){
-      .form-grid{grid-template-columns:1fr}
-    }
+ .hero::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 60%);
+ }
 
-    .field{
-      position:relative;
-      padding-top:25px
-    
-  }
-    .field input[type=text],
-    .field input[type=email],
-    .field input[type=tel],
-    .field input[type=number],
-    .field input[type=date],
-    .field input[type=time],
-    .field select,
-    .field textarea {
-      width:100%;
-      border:0;
-      border-bottom:2px solid #cfcfcf;
-      background:transparent;
-      padding:8px 6px 10px 0;
-      font-size:15px;
-      outline:none;
-      transition:all .25s ease;
-      font-family:'Oswald',sans-serif
-    }
+ .hero-inner {
+   position: relative;
+   z-index: 2;
+   max-width: 1200px;
+   margin: 40px auto;
+   padding: 48px 24px;
+   color: #fff
+ }
 
-    .field textarea{
-      min-height:120px;
-      resize:vertical
-    }
+ .hero h1 {
+   font-size: 64px;
+   letter-spacing: 3px;
+   margin-bottom: 12px;
+   font-weight: 600
+ }
 
-    .field label{
-      position:absolute;
-      left:0;
-      top:20px;
-      font-size:14px;
-      color:#222;
-      pointer-events:none;
-      transition:all .18s ease;
-      font-family:'Oswald',sans-serif;
-    }
-    /* Make inputs show label above when focused or when they have text */
-    .field input:focus + label,.field input:not(:placeholder-shown) + label,
-    .field textarea:focus + label,.field textarea:not(:placeholder-shown) + label,
-    .field select:focus + label,.field select:not([value=""]) + label{
-      top:-12px;font-size:12px;color:#0c9b96}
+ .hero p {
+   max-width: 800px;
+   font-size: 18px;
+   line-height: 1.4;
+   opacity: 0.95;
+   font-weight: 300
+ }
 
-    .field input:focus,.field textarea:focus,.field select:focus{
-      border-bottom-color:#0c9b96;
-    }
+ /* LAYOUT */
+ .container {
+   max-width: 1100px;
+   margin: 40px auto;
+   padding: 0 24px;
+ }
 
-    /* country code + phone in one row */
-    .phone-container {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 12px;
-      align-items: center;
-    }
-    @media (max-width: 640px) {
-      .phone-container {
-        grid-template-columns: 1fr;
-      }
-    }
+ /* FORM - with background image */
+ form {
+   display: block;
+   padding: 30px;
+   border-radius: 8px;
+ }
 
-    /* subtle bottom line separator */
-    .divider{
-      height:1px;
-      background:#e9e9e9;
-      margin:28px 0;
-    }
+ form::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(255, 255, 255, 0.92);
+   z-index: -1;
+ }
 
-    /* submit */
-    .actions{
-      display:flex;
-      justify-content:flex-end;
-      margin-top:14px;
-    }
-    .btn{
-      background:#0c9b96;
-      color:#fff;
-      padding:12px 20px;
-      border-radius:30px;
-      border:none;
-      cursor:pointer;
-      font-family:'Oswald',sans-serif;
-      font-weight:500;
-      font-size:16px;
-      letter-spacing:0.5px;
-    }
+ .form-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 35px;
 
-    /* contact footer */
-    .contact{
-      margin-top:56px;
-      padding:28px;
-      border-top:1px solid #ececec;
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-    }
+ }
 
-    .contacts-left{
-      max-width:640px;
-    }
-    .contacts-right{
-      min-width:260px;
-    }
-    @media (max-width:780px){.contact{flex-direction:column}.contacts-right{margin-top:20px}}
+ @media (max-width:920px) {
+   .form-grid {
+     grid-template-columns: repeat(2, 1fr)
+   }
+ }
 
-    /* small helper text */
-    .muted{
-      color:#666
-      ;font-size:13px;
-    }
+ @media (max-width:640px) {
+   .form-grid {
+     grid-template-columns: 1fr
+   }
+ }
 
-    /* small focus animation bubble */
-    .focus-underline{
-      position:relative;
-    }
-    .focus-underline::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-2px;
-    height:2px;
-    width:0;
-    background:#0c9b96;
-    transition:width .25s ease
-  }
+ .field {
+   position: relative;
+   padding-top: 25px
+ }
 
-    /* accessibility: visible focus */
-    input:focus,select:focus,textarea:focus{
-      box-shadow:0 1px 0 rgba(106,138,10,0.06) 
-    }
+ .field input[type=text],
+ .field input[type=email],
+ .field input[type=tel],
+ .field input[type=number],
+ .field input[type=date],
+ .field input[type=time],
+ .field select,
+ .field textarea {
+   width: 100%;
+   border: 0;
+   border-bottom: 2px solid #cfcfcf;
+   background: transparent;
+   padding: 8px 6px 10px 0;
+   font-size: 15px;
+   outline: none;
+   transition: all .25s ease;
+   font-family: 'Oswald', sans-serif
+ }
 
-    /* small note under form */
-    .note{
-      font-size:13px;
-      color:#4e5253;
-      margin-top:12px;
-    }
-    /* Fix for phone row alignment */
-    .phone-row-fixed {
-      grid-column: span 2;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    /* Better spacing for form sections */
-    .form-section {
-      margin-bottom: 28px;
-    }
-    
-    /* Fix for country code dropdown */
-    .country-code-field {
-      padding-top: 25px;
-    }
-    
-    /* NEW: Custom Modal Design */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .modal-content {
-      background-color: #fff;
-      margin: auto;
-      padding: 0;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 500px;
-      box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-      animation: modalopen 0.4s;
-      overflow: hidden;
-      font-family: 'Oswald', sans-serif;
-    }
-    
-    @keyframes modalopen {
-      from {opacity: 0; transform: translateY(-60px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    
-    .modal-header {
-      background: #00c6c3;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-    
-    .modal-header h2 {
-      font-size: 24px;
-      font-weight: 600;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-    
-    .close {
-      color: white;
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    
-    .close:hover {
-      color: #00a5a8;
-    }
-    
-    .modal-body {
-      padding: 30px;
-      text-align: center;
-      font-size: 18px;
-      color: #000000;
-      font-weight: 400;
-    }
-    
-    .modal-icon {
-      font-size: 50px;
-      color: #00a5a8;
-      margin-bottom: 20px;
-    }
-    
-    .modal-footer {
-      padding: 15px;
-      text-align: center;
-      background: #f8f9fa;
-    }
-    
-    .modal-btn {
-      background: #00a5a8;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      text-align: center;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 16px;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      letter-spacing: 1px;
-    }
-    
-    .modal-btn:hover {
-      background: #0c9b96;
-    }
-    
-    /* NEW: Updated font sizes for specific elements */
-    .meeting-header {
-      font-size: 26px !important;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      margin: 6px 0 12px !important;
-    }
-    
-    .contact-header {
-      font-size: 22px !important;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-    
-    .office-hours {
-      font-size: 22px !important;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-    
-    .social-header {
-      font-size: 22px !important;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-    
-    
+ .field textarea {
+   min-height: 120px;
+   resize: vertical
+ }
+
+ .field label {
+   position: absolute;
+   left: 0;
+   top: 20px;
+   font-size: 14px;
+   color: #222;
+   pointer-events: none;
+   transition: all .18s ease;
+   font-family: 'Oswald', sans-serif;
+ }
+
+ /* Make inputs show label above when focused or when they have text */
+ .field input:focus+label,
+ .field input:not(:placeholder-shown)+label,
+ .field textarea:focus+label,
+ .field textarea:not(:placeholder-shown)+label,
+ .field select:focus+label,
+ .field select:not([value=""])+label {
+   top: -12px;
+   font-size: 12px;
+   color: #0c9b96
+ }
+
+ .field input:focus,
+ .field textarea:focus,
+ .field select:focus {
+   border-bottom-color: #0c9b96;
+ }
+
+ /* country code + phone in one row */
+ .phone-container {
+   display: grid;
+   grid-template-columns: 140px 1fr;
+   gap: 12px;
+   align-items: center;
+ }
+
+ @media (max-width: 640px) {
+   .phone-container {
+     grid-template-columns: 1fr;
+   }
+ }
+
+ /* subtle bottom line separator */
+ .divider {
+   height: 1px;
+   background: #e9e9e9;
+   margin: 28px 0;
+ }
+
+ /* submit */
+ .actions {
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 14px;
+ }
+
+ .btn {
+   background: #0c9b96;
+   color: #fff;
+   padding: 12px 20px;
+   border-radius: 30px;
+   border: none;
+   cursor: pointer;
+   font-family: 'Oswald', sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   letter-spacing: 0.5px;
+ }
+
+ /* contact footer */
+ .contact {
+   margin-top: 56px;
+   padding: 28px;
+   border-top: 1px solid #ececec;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+ }
+
+ .contacts-left {
+   max-width: 640px;
+ }
+
+ .contacts-right {
+   min-width: 260px;
+ }
+
+ @media (max-width:780px) {
+   .contact {
+     flex-direction: column
+   }
+
+   .contacts-right {
+     margin-top: 20px
+   }
+ }
+
+ /* small helper text */
+ .muted {
+   color: #666;
+   font-size: 13px;
+ }
+
+ /* small focus animation bubble */
+ .focus-underline {
+   position: relative;
+ }
+
+ .focus-underline::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   height: 2px;
+   width: 0;
+   background: #0c9b96;
+   transition: width .25s ease
+ }
+
+ /* accessibility: visible focus */
+ input:focus,
+ select:focus,
+ textarea:focus {
+   box-shadow: 0 1px 0 rgba(106, 138, 10, 0.06)
+ }
+
+ /* small note under form */
+ .note {
+   font-size: 13px;
+   color: #4e5253;
+   margin-top: 12px;
+ }
+
+ /* Fix for phone row alignment */
+ .phone-row-fixed {
+   grid-column: span 2;
+   display: flex;
+   flex-direction: column;
+ }
+
+ /* Better spacing for form sections */
+ .form-section {
+   margin-bottom: 28px;
+ }
+
+ /* Fix for country code dropdown */
+ .country-code-field {
+   padding-top: 25px;
+ }
+
+ /* NEW: Custom Modal Design */
+ .modal {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   align-items: center;
+   justify-content: center;
+ }
+
+ .modal-content {
+   background-color: #fff;
+   margin: auto;
+   padding: 0;
+   border-radius: 12px;
+   width: 90%;
+   max-width: 500px;
+   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+   animation: modalopen 0.4s;
+   overflow: hidden;
+   font-family: 'Oswald', sans-serif;
+ }
+
+ @keyframes modalopen {
+   from {
+     opacity: 0;
+     transform: translateY(-60px);
+   }
+
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ .modal-header {
+   background: #00c6c3;
+   color: white;
+   padding: 20px;
+   text-align: center;
+   position: relative;
+ }
+
+ .modal-header h2 {
+   font-size: 24px;
+   font-weight: 600;
+   margin: 0;
+   letter-spacing: 1px;
+ }
+
+ .close {
+   color: white;
+   position: absolute;
+   top: 20px;
+   right: 25px;
+   font-size: 28px;
+   font-weight: bold;
+   cursor: pointer;
+ }
+
+ .close:hover {
+   color: #00a5a8;
+ }
+
+ .modal-body {
+   padding: 30px;
+   text-align: center;
+   font-size: 18px;
+   color: #000000;
+   font-weight: 400;
+ }
+
+ .modal-icon {
+   font-size: 50px;
+   color: #00a5a8;
+   margin-bottom: 20px;
+ }
+
+ .modal-footer {
+   padding: 15px;
+   text-align: center;
+   background: #f8f9fa;
+ }
+
+ .modal-btn {
+   background: #00a5a8;
+   color: white;
+   border: none;
+   padding: 12px 30px;
+   text-align: center;
+   border-radius: 30px;
+   cursor: pointer;
+   font-size: 16px;
+   font-family: 'Oswald', sans-serif;
+   font-weight: 500;
+   letter-spacing: 1px;
+ }
+
+ .modal-btn:hover {
+   background: #0c9b96;
+ }
+
+ /* NEW: Updated font sizes for specific elements */
+ .meeting-header {
+   font-size: 26px !important;
+   font-weight: 500;
+   letter-spacing: 0.5px;
+   margin: 6px 0 12px !important;
+ }
+
+ .contact-header {
+   font-size: 22px !important;
+   font-weight: 500;
+   letter-spacing: 0.5px;
+ }
+
+ .office-hours {
+   font-size: 22px !important;
+   font-weight: 500;
+   letter-spacing: 0.5px;
+ }
+
+ .social-header {
+   font-size: 22px !important;
+   font-weight: 500;
+   letter-spacing: 0.5px;
+ }

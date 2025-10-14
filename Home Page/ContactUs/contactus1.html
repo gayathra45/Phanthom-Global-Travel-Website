@@ -1,238 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us & Location</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Location</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="../New folder/Favicon (2).png" type="image/png">
 
-:root {
-    --primary-color: #0d6efd;
-    --glass-bg: rgba(255, 255, 255, 0.15);
-    --glass-blur: 20px;
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Oswald';
-    line-height: 1.5;
-    background-color: #fff;
-    color: #000;
-    overflow-x: hidden;
-}
-
-/* VIDEO BACKGROUND */
-.video-bg-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.video-bg-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    filter: brightness(0.5);
-}
-
-/* COMPANY DETAILS */
-.company-details {
-    max-width: 600px;
-    margin: 100px auto;
-    padding: 30px;
-    border-radius: 15px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    text-align: center;
-    color: #000;
-    position: relative;
-    z-index: 1;
-    animation: fadeIn 1s ease forwards;
-    
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(30px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-.company-details h3 {
-    font-family: 'Audiowide';
-    margin-bottom: 15px;
-    color: #000;
-}
-
-.company-details p {
-    margin: 8px 0;
-    font-size: 1rem;
-    color: #000;
-}
-
-.company-details a {
-    color: #000;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.company-details a:hover {
-    text-decoration: underline;
-}
-
-/* NEW CONTACT FORM (glass style like company-details) */
-#contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 15px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    color: #000;
-    position: relative;
-    z-index: 1;
-    animation: fadeIn 1s ease forwards;
-}
-
-#contact-form h2 {
-    font-family: 'Audiowide', cursive;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #000;
-}
-
-#contact-form label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #000;
-}
-
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.3);
-    margin-bottom: 20px;
-    font-size: 1rem;
-    background-color: rgba(255,255,255,0.3);
-    color: #000;
-    outline: none;
-    transition: 0.3s;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: var(--primary-color);
-    background-color: rgba(255,255,255,0.5);
-}
-
-#contact-form .btn {
-    width: 100%;
-    font-weight: 700;
-    background-color: var(--primary-color);
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-#contact-form .btn:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-/* LOCATION SECTION */
-.location-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5em;
-    color: #fff;
-    background-color: #0c0c0c;
-    padding: 50px 20px;
-}
-
-.location-section .box {
-    max-width: 600px;
-}
-
-.location-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.location-section p {
-    font-size: 1.1rem;
-    color: #fff;
-}
-
-.location-section iframe {
-    border-radius: 2em;
-    border: none;
-    width: 100%;
-    max-width: 500px;
-    height: 500px;
-    opacity: 0.7;
-    transition: 0.3s ease-in-out;
-}
-
-.location-section iframe:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-
-/* ---------------- MOBILE VIEW ---------------- */
-@media (max-width:768px){
-    body {
-        font-size: 0.9rem;
+    :root {
+      --primary-color: #0d6efd;
+      --glass-bg: rgba(255, 255, 255, 0.15);
+      --glass-blur: 20px;
     }
-    .company-details,
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Oswald';
+      line-height: 1.5;
+      background-color: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    /* VIDEO BACKGROUND */
+    .video-bg-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-bg-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+
+    /* COMPANY DETAILS */
+    .company-details {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 30px;
+      border-radius: 15px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur));
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      color: #000;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 1s ease forwards;
+
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .company-details h3 {
+      font-family: 'Audiowide';
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .company-details p {
+      margin: 8px 0;
+      font-size: 1rem;
+      color: #000;
+    }
+
+    .company-details a {
+      color: #000;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: transform 0.4s ease;
+      z-index: 9999;
+      background-color: none;
+      box-shadow: none;
+    }
+
+    header.hide-nav {
+      transform: translateY(-100%);
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+
+    .company-details a:hover {
+      text-decoration: underline;
+    }
+
+    /* NEW CONTACT FORM (glass style like company-details) */
     #contact-form {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur));
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      color: #000;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    #contact-form h2 {
+      font-family: 'Audiowide', cursive;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #000;
+    }
+
+    #contact-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #000;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+      border-color: var(--primary-color);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    #contact-form .btn {
+      width: 100%;
+      font-weight: 700;
+      background-color: var(--primary-color);
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    #contact-form .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* LOCATION SECTION */
+    .location-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5em;
+      color: #fff;
+      background-color: #0c0c0c;
+      padding: 50px 20px;
+    }
+
+    .location-section .box {
+      max-width: 600px;
+    }
+
+    .location-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .location-section p {
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .location-section iframe {
+      border-radius: 2em;
+      border: none;
+      width: 100%;
+      max-width: 500px;
+      height: 500px;
+      opacity: 0.7;
+      transition: 0.3s ease-in-out;
+    }
+
+    .location-section iframe:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
+
+    /* ---------------- MOBILE VIEW ---------------- */
+    @media (max-width:768px) {
+      body {
+        font-size: 0.9rem;
+      }
+
+      .company-details,
+      #contact-form {
         margin: 20px;
         padding: 20px;
-    }
-    .location-section { 
-        flex-direction: column; 
-        gap: 2em; 
+      }
+
+      .location-section {
+        flex-direction: column;
+        gap: 2em;
         padding: 30px 15px;
         text-align: center;
-    }
-    .location-section h1 {
+      }
+
+      .location-section h1 {
         font-size: 1.8rem;
-    }
-    .location-section p {
+      }
+
+      .location-section p {
         font-size: 0.95rem;
-    }
-    .location-section iframe {
+      }
+
+      .location-section iframe {
         max-width: 100%;
         height: 300px;
+      }
     }
-}
-</style>
+  </style>
 </head>
+
 <body>
 
-    <header>
+  <header>
     <a href="../main.html" class="brand">
 
       <img src="../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -255,22 +291,22 @@ body {
     </div>
   </header>
 
-<link rel="stylesheet" href="../main.css">
-<script src="../main.js"></script>
+  <link rel="stylesheet" href="../main.css">
+  <script src="../main.js"></script>
 
-<div class="video-bg-container">
+  <div class="video-bg-container">
     <video autoplay muted loop>
-        <source src="./4010941-uhd_3840_2160_25fps.mp4" type="video/mp4">
+      <source src="./4010941-uhd_3840_2160_25fps.mp4" type="video/mp4">
     </video>
 
     <section class="company-details">
-        <h3>SRI LANKA</h3>
-        <p><strong>Branch Office</strong></p>
-        <p> WGVR+4GM, Matara, Sri Lanka</p>
-        <p>📞 <a href="tel:+94312279304">+94-31-227 7896</a></p>
-        <p>📠 <a href="tel:+94312279277">+94-31-227 8445</a></p>
-        <p>✉ <a href="mailto:phantomglobal@gmail.com">phantomglobal@gmail.com</a></p>
-        <p>🌐 <a href="https://www.phantomglobal.com" target="_blank">www.phantomglobal.com</a></p>
+      <h3>SRI LANKA</h3>
+      <p><strong>Branch Office</strong></p>
+      <p> WGVR+4GM, Matara, Sri Lanka</p>
+      <p>📞 <a href="tel:+94312279304">+94-31-227 7896</a></p>
+      <p>📠 <a href="tel:+94312279277">+94-31-227 8445</a></p>
+      <p>✉ <a href="mailto:phantomglobal@gmail.com">phantomglobal@gmail.com</a></p>
+      <p>🌐 <a href="https://www.phantomglobal.com" target="_blank">www.phantomglobal.com</a></p>
     </section>
 
     <!-- NEW CONTACT FORM (glass style) -->
@@ -295,18 +331,25 @@ body {
         <button type="submit" class="btn">Submit</button>
       </form>
     </section>
-</div>
+  </div>
 
 
-<section class="location-section">
+  <section class="location-section">
     <div class="box">
-        <h1>Our Location</h1>
-        <p>Phantom Global is proudly based in Matara, a lively coastal city in the Southern Province of Sri Lanka. Located at Matara Town, our office is surrounded by scenic beaches and a vibrant local culture, making it an ideal hub for travel planning. With easy access to both the southern expressway and nearby attractions, our location ensures that clients can conveniently connect with us to begin their journeys. Whether you’re preparing for a relaxing beach getaway or an international adventure, we are here in Matara to guide you every step of the way.</p>
+      <h1>Our Location</h1>
+      <p>Phantom Global is proudly based in Matara, a lively coastal city in the Southern Province of Sri Lanka. Located
+        at Matara Town, our office is surrounded by scenic beaches and a vibrant local culture, making it an ideal hub
+        for travel planning. With easy access to both the southern expressway and nearby attractions, our location
+        ensures that clients can conveniently connect with us to begin their journeys. Whether you’re preparing for a
+        relaxing beach getaway or an international adventure, we are here in Matara to guide you every step of the way.
+      </p>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.376970900758!2d80.5412533!3d5.9426727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae13f007debfef3%3A0xdcc1233b447ecadc!2sPhanthom%20Global%20SL!5e0!3m2!1sen!2slk!4v1755244580813!5m2!1sen!2slk" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.376970900758!2d80.5412533!3d5.9426727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae13f007debfef3%3A0xdcc1233b447ecadc!2sPhanthom%20Global%20SL!5e0!3m2!1sen!2slk!4v1755244580813!5m2!1sen!2slk"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
 
-<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
@@ -393,5 +436,32 @@ body {
     </div>
 
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
+
 </body>
+
 </html>

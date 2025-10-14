@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="../../New folder/Favicon (2).png" type="image/png">
 
-  <title>Shopping Destinations  - Phantom Global</title>
+  <title>Shopping Destinations - Phantom Global</title>
   <style>
     * {
       margin: 0;
@@ -21,7 +24,9 @@
       font-family: 'Oswald', sans-serif;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: 'Oswald', sans-serif;
       letter-spacing: 1px;
     }
@@ -31,7 +36,7 @@
       position: relative;
       width: 100%;
       height: 70vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://media.istockphoto.com/id/1418843612/photo/vittorio-emanuele-ii-milan.jpg?s=612x612&w=0&k=20&c=y-rEdnYtBBkrWCEVmJyjCjDPZdNIWF72RuLzcD0fyFg=") center/cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -66,7 +71,7 @@
       font-weight: bold;
       letter-spacing: 0.5px;
       transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .banner a:hover {
@@ -111,13 +116,13 @@
       background: #f9f9f9;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     }
 
     .card img {
@@ -167,7 +172,7 @@
       margin: 3rem auto;
       width: 90%;
       max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .cta h2 {
@@ -202,118 +207,141 @@
     }
 
     /* Tablet view */
-@media (max-width: 768px) {
-  .banner {
-    height: 55vh;
-    padding: 1.5rem;
-  }
+    @media (max-width: 768px) {
+      .banner {
+        height: 55vh;
+        padding: 1.5rem;
+      }
 
-  .banner h1 {
-    font-size: 2rem;
-  }
+      .banner h1 {
+        font-size: 2rem;
+      }
 
-  .banner p {
-    font-size: 1rem;
-  }
+      .banner p {
+        font-size: 1rem;
+      }
 
-  .banner a {
-    padding: 0.6rem 1.4rem;
-    font-size: 0.9rem;
-  }
+      .banner a {
+        padding: 0.6rem 1.4rem;
+        font-size: 0.9rem;
+      }
 
-  h2 {
-    font-size: 1.8rem;
-  }
+      h2 {
+        font-size: 1.8rem;
+      }
 
-  .card-content h3 {
-    font-size: 1.2rem;
-  }
+      .card-content h3 {
+        font-size: 1.2rem;
+      }
 
-  .card-content p {
-    font-size: 0.9rem;
-  }
+      .card-content p {
+        font-size: 0.9rem;
+      }
 
-  .card-content ul {
-    font-size: 0.85rem;
-  }
+      .card-content ul {
+        font-size: 0.85rem;
+      }
 
-  .cta {
-    padding: 2rem 1rem;
-  }
+      .cta {
+        padding: 2rem 1rem;
+      }
 
-  .cta h2 {
-    font-size: 1.5rem;
-  }
+      .cta h2 {
+        font-size: 1.5rem;
+      }
 
-  .cta p {
-    font-size: 1rem;
-  }
+      .cta p {
+        font-size: 1rem;
+      }
 
-  .cta a {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
-  }
-}
+      header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: transform 0.4s ease;
+        z-index: 9999;
+        background-color: none;
+        box-shadow: none;
+      }
 
-/* Mobile view */
-@media (max-width: 480px) {
-  .banner {
-    height: 50vh;
-    padding: 1rem;
-  }
+      header.hide-nav {
+        transform: translateY(-100%);
+      }
 
-  .banner h1 {
-    font-size: 1.6rem;
-  }
+      body {
+        padding-top: 100px;
+      }
 
-  .banner p {
-    font-size: 0.9rem;
-  }
 
-  h2 {
-    font-size: 1.5rem;
-  }
 
-  .card img {
-    height: 180px;
-  }
 
-  .card-content {
-    padding: 1rem;
-  }
 
-  .card-content h3 {
-    font-size: 1.1rem;
-  }
+      .cta a {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
 
-  .card-content p,
-  .card-content ul {
-    font-size: 0.85rem;
-  }
+    /* Mobile view */
+    @media (max-width: 480px) {
+      .banner {
+        height: 50vh;
+        padding: 1rem;
+      }
 
-  .cta {
-    padding: 1.5rem 1rem;
-  }
+      .banner h1 {
+        font-size: 1.6rem;
+      }
 
-  .cta h2 {
-    font-size: 1.3rem;
-  }
+      .banner p {
+        font-size: 0.9rem;
+      }
 
-  .cta p {
-    font-size: 0.9rem;
-  }
+      h2 {
+        font-size: 1.5rem;
+      }
 
-  .cta a {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-  }
-}
+      .card img {
+        height: 180px;
+      }
 
+      .card-content {
+        padding: 1rem;
+      }
+
+      .card-content h3 {
+        font-size: 1.1rem;
+      }
+
+      .card-content p,
+      .card-content ul {
+        font-size: 0.85rem;
+      }
+
+      .cta {
+        padding: 1.5rem 1rem;
+      }
+
+      .cta h2 {
+        font-size: 1.3rem;
+      }
+
+      .cta p {
+        font-size: 0.9rem;
+      }
+
+      .cta a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-    <header>
+  <header>
     <a href="../../main.html" class="brand">
 
       <img src="../../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -336,13 +364,13 @@
     </div>
   </header>
 
-<link rel="stylesheet" href="../../main.css">
-<script src="../../main.js"></script>
+  <link rel="stylesheet" href="../../main.css">
+  <script src="../../main.js"></script>
 
 
-<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
   <!-- Banner -->
   <section class="banner">
@@ -358,7 +386,9 @@
 
       <!-- New Zealand -->
       <div class="card">
-        <img src="https://www.newzealand.com/assets/Tourism-NZ/Queenstown/img-1536052373-8698-8672-3696645585_340259a696_o__aWxvdmVrZWxseQo_CropResizeWzUwMCwzNzUsODAsImpwZyJd.jpg" alt="New Zealand Shopping">
+        <img
+          src="https://www.newzealand.com/assets/Tourism-NZ/Queenstown/img-1536052373-8698-8672-3696645585_340259a696_o__aWxvdmVrZWxseQo_CropResizeWzUwMCwzNzUsODAsImpwZyJd.jpg"
+          alt="New Zealand Shopping">
         <div class="card-content">
           <h3>New Zealand</h3>
           <p>Find unique Kiwi products, fashion, and souvenirs.</p>
@@ -372,7 +402,9 @@
 
       <!-- Australia -->
       <div class="card">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/57/55/75/queen-victoria-building.jpg?w=500&h=500&s=1" alt="Australia Shopping">
+        <img
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/57/55/75/queen-victoria-building.jpg?w=500&h=500&s=1"
+          alt="Australia Shopping">
         <div class="card-content">
           <h3>Australia</h3>
           <p>Shop luxury brands, local fashion, and markets in vibrant cities.</p>
@@ -386,7 +418,9 @@
 
       <!-- Canada -->
       <div class="card">
-        <img src="https://media.istockphoto.com/id/1280958424/photo/two-women-walking-through-whistler-village-with-shopping-bags.jpg?s=612x612&w=0&k=20&c=nhEI8eMEJYw1If4Z69guFWBoxrJxfph_d0aX6yZ75-E=" alt="Canada Shopping">
+        <img
+          src="https://media.istockphoto.com/id/1280958424/photo/two-women-walking-through-whistler-village-with-shopping-bags.jpg?s=612x612&w=0&k=20&c=nhEI8eMEJYw1If4Z69guFWBoxrJxfph_d0aX6yZ75-E="
+          alt="Canada Shopping">
         <div class="card-content">
           <h3>Canada</h3>
           <p>Explore Canadian fashion, artisan goods, and lively marketplaces.</p>
@@ -400,7 +434,9 @@
 
       <!-- Switzerland -->
       <div class="card">
-        <img src="https://www.iamexpat.ch/_next/image?url=https%3A%2F%2Fdirectus.iamexpat.com%2Fassets%2Fcf0f54fe-3d1a-4d25-b55d-f9d0a13cf7ba&w=1920&q=75" alt="Switzerland Shopping">
+        <img
+          src="https://www.iamexpat.ch/_next/image?url=https%3A%2F%2Fdirectus.iamexpat.com%2Fassets%2Fcf0f54fe-3d1a-4d25-b55d-f9d0a13cf7ba&w=1920&q=75"
+          alt="Switzerland Shopping">
         <div class="card-content">
           <h3>Switzerland</h3>
           <p>Shop for chocolates, watches, and traditional Swiss souvenirs.</p>
@@ -414,7 +450,8 @@
 
       <!-- UK -->
       <div class="card">
-        <img src="https://stjamesquarter.com/wp-content/uploads/2023/10/About-the-%E2%80%A8St-James-quarter.jpg" alt="UK Shopping">
+        <img src="https://stjamesquarter.com/wp-content/uploads/2023/10/About-the-%E2%80%A8St-James-quarter.jpg"
+          alt="UK Shopping">
         <div class="card-content">
           <h3>United Kingdom</h3>
           <p>From high-street fashion to historic markets, UK shopping has it all.</p>
@@ -436,7 +473,7 @@
     <a href="../PlanTrip/index.html">Explore Now</a>
   </section>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">
         <img src="../../New folder/logo2.png" alt="Truly Sri Lanka">
@@ -519,5 +556,31 @@
 
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
+
 </body>
+
 </html>

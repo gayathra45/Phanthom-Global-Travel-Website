@@ -1,130 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Discover Australia</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Australia</title>
+  <link rel="icon" href="../New folder/Favicon (2).png" type="image/png">
 
-   body {
-    margin: 0;
-    font-family: 'Oswald', Arial, sans-serif; /* Default font */
-    line-height: 1.6;
-    background-color:#ffffff;
-    color: #fff;
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
 
-h1, h2, h3 {
-    font-family: 'Oswald', cursive;  /* Fancy font for headings */
-}
+    body {
+      margin: 0;
+      font-family: 'Oswald', Arial, sans-serif;
+      /* Default font */
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #fff;
+    }
 
-.video-container {
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        overflow: hidden;
+    h1,
+    h2,
+    h3 {
+      font-family: 'Oswald', cursive;
+      /* Fancy font for headings */
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
     }
 
     .video-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    
+    header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: transform 0.4s ease;
+      z-index: 9999;
+      background-color: none;
+      box-shadow: none;
+    }
+
+    header.hide-nav {
+      transform: translateY(-100%);
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+
+
+
+
+
     .video-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 4vw;
-        font-weight: bold;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        text-align: center;
-        max-width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 4vw;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      max-width: 90%;
     }
 
     .about-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px 20px;
-    background: rgba(0, 0, 0, 0.6); 
-    border-radius: 15px;
-    color: #fff; 
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
-    box-shadow: 0 8px 20px rgba(6, 10, 10, 0.5);
-}
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      box-shadow: 0 8px 20px rgba(6, 10, 10, 0.5);
+    }
 
-.about-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffd166; 
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-}
+    .about-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffd166;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
 
-.about-section p {
-    font-family: 'Oswald';
-    text-indent: 30px; 
-}
+    .about-section p {
+      font-family: 'Oswald';
+      text-indent: 30px;
+    }
 
     .places {
-        padding: 3rem 2rem;
-        background-color: #fffefe;
-    }
-    .places h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-        color: #080000;
-    }
-    .place-card {
-        background-color: #005758;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    .place-image {
-        flex: 1 1 300px;
-        min-height: 250px;
-        background-size: cover;
-        background-position: center;
-    }
-    .place-info {
-        flex: 1 1 300px;
-        padding: 1.5rem;
-    }
-    .place-info h3 {
-        margin-top: 0;
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: #00f5f5;
-    }
-    .place-info p {
-        line-height: 1.6;
-        color: #ddd;
-        white-space: pre-line;
-        text-align: justify;
+      padding: 3rem 2rem;
+      background-color: #fffefe;
     }
 
-    
-    @media(max-width:768px){
-        .place-card {
-            flex-direction: column;
-        }
+    .places h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #080000;
     }
-</style>
+
+    .place-card {
+      background-color: #005758;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .place-image {
+      flex: 1 1 300px;
+      min-height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .place-info {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+    }
+
+    .place-info h3 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00f5f5;
+    }
+
+    .place-info p {
+      line-height: 1.6;
+      color: #ddd;
+      white-space: pre-line;
+      text-align: justify;
+    }
+
+
+    @media(max-width:768px) {
+      .place-card {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-        <header>
+  <header>
     <a href="../main.html" class="brand">
 
       <img src="../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -147,73 +184,98 @@ h1, h2, h3 {
     </div>
   </header>
 
-<link rel="stylesheet" href="../main.css">
-<script src="../main.js"></script>
+  <link rel="stylesheet" href="../main.css">
+  <script src="../main.js"></script>
 
 
-<div class="video-container">
+  <div class="video-container">
     <video autoplay muted loop>
-        <source src="./AustraliaMainVedio.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+      <source src="./AustraliaMainVedio.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div class="video-text">
-        <h1>Australia</h1>
+      <h1>Australia</h1>
     </div>
-</div>
+  </div>
 
-<div class="about-section">
-    
+  <div class="about-section">
+
     <p>
-        Australia is famous for its unique wildlife, including kangaroos, koalas, wombats, and emus, many of which are native only to the continent. The country has a rich Aboriginal culture, with traditions, art, and languages dating back tens of thousands of years. Australia’s economy is diverse, relying on mining, agriculture, tourism, and services. Major natural landmarks include the Great Barrier Reef, the Outback, Uluru (Ayers Rock), and the Blue Mountains. The country also has vibrant cities with cultural, educational, and sporting attractions, such as Melbourne, known for its arts and coffee culture, and Brisbane, a gateway to the Gold Coast and Sunshine Coast. Australia’s climate varies widely, from tropical in the north to temperate in the south, and it attracts millions of international visitors each year for its natural beauty, adventure activities, and wildlife experiences.
-</div>
+      Australia is famous for its unique wildlife, including kangaroos, koalas, wombats, and emus, many of which are
+      native only to the continent. The country has a rich Aboriginal culture, with traditions, art, and languages
+      dating back tens of thousands of years. Australia’s economy is diverse, relying on mining, agriculture, tourism,
+      and services. Major natural landmarks include the Great Barrier Reef, the Outback, Uluru (Ayers Rock), and the
+      Blue Mountains. The country also has vibrant cities with cultural, educational, and sporting attractions, such as
+      Melbourne, known for its arts and coffee culture, and Brisbane, a gateway to the Gold Coast and Sunshine Coast.
+      Australia’s climate varies widely, from tropical in the north to temperate in the south, and it attracts millions
+      of international visitors each year for its natural beauty, adventure activities, and wildlife experiences.
+  </div>
 
 
 
-<section class="places">
+  <section class="places">
     <h2>Best Places to Visit</h2>
 
     <div class="place-card">
-        <div class="place-image" style="background-image:url('./australia-Sydney.jpeg');"></div>
-        <div class="place-info">
-            <h3>Sydney</h3>
-            <p>Sydney, on the southeastern coast, is Australia’s largest city and a hub of culture, business, and tourism. The Sydney Opera House and Sydney Harbour Bridge are world-famous landmarks. Visitors can take ferry rides across the harbour, explore the historic Rocks district, or relax on Bondi and Manly beaches. Sydney also has thriving arts and cultural scenes at the Art Gallery of New South Wales, the Museum of Contemporary Art, and the Australian Museum. Outdoor activities include coastal walks like the Bondi to Coogee Walk, whale watching, and harbour kayaking.</p>
-        </div>
+      <div class="place-image" style="background-image:url('./australia-Sydney.jpeg');"></div>
+      <div class="place-info">
+        <h3>Sydney</h3>
+        <p>Sydney, on the southeastern coast, is Australia’s largest city and a hub of culture, business, and tourism.
+          The Sydney Opera House and Sydney Harbour Bridge are world-famous landmarks. Visitors can take ferry rides
+          across the harbour, explore the historic Rocks district, or relax on Bondi and Manly beaches. Sydney also has
+          thriving arts and cultural scenes at the Art Gallery of New South Wales, the Museum of Contemporary Art, and
+          the Australian Museum. Outdoor activities include coastal walks like the Bondi to Coogee Walk, whale watching,
+          and harbour kayaking.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./Australia-GreatBarrierReef.jpeg');"></div>
-        <div class="place-info">
-            <h3>Great Barrier Reef</h3>
-            <p>The Great Barrier Reef, off the northeast coast in Queensland, is the world’s largest coral reef system and a UNESCO World Heritage Site. Visitors can snorkel, scuba dive, or take glass-bottom boat tours to see colorful corals, tropical fish, sea turtles, and manta rays. Towns like Cairns and Port Douglas serve as gateways to the reef and nearby tropical rainforests, including the Daintree Rainforest, where guided walks and river cruises offer encounters with native wildlife like crocodiles and cassowaries.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./Australia-GreatBarrierReef.jpeg');"></div>
+      <div class="place-info">
+        <h3>Great Barrier Reef</h3>
+        <p>The Great Barrier Reef, off the northeast coast in Queensland, is the world’s largest coral reef system and a
+          UNESCO World Heritage Site. Visitors can snorkel, scuba dive, or take glass-bottom boat tours to see colorful
+          corals, tropical fish, sea turtles, and manta rays. Towns like Cairns and Port Douglas serve as gateways to
+          the reef and nearby tropical rainforests, including the Daintree Rainforest, where guided walks and river
+          cruises offer encounters with native wildlife like crocodiles and cassowaries.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./AustraliaUluru.jpeg');"></div>
-        <div class="place-info">
-            <h3>Uluru (Ayers Rock)</h3>
-            <p>In the heart of the Northern Territory, Uluru is a massive red sandstone monolith sacred to the Anangu people. Visitors can walk around the base of Uluru, watch the sunrise or sunset that transforms the rock’s colors, and learn about Aboriginal culture at the Cultural Centre. Nearby, the Kata Tjuta (The Olgas) offer dramatic rock formations and hiking trails, including the Valley of the Winds Walk.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./AustraliaUluru.jpeg');"></div>
+      <div class="place-info">
+        <h3>Uluru (Ayers Rock)</h3>
+        <p>In the heart of the Northern Territory, Uluru is a massive red sandstone monolith sacred to the Anangu
+          people. Visitors can walk around the base of Uluru, watch the sunrise or sunset that transforms the rock’s
+          colors, and learn about Aboriginal culture at the Cultural Centre. Nearby, the Kata Tjuta (The Olgas) offer
+          dramatic rock formations and hiking trails, including the Valley of the Winds Walk.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./Autralia-Melborne.jpeg');"></div>
-        <div class="place-info">
-            <h3>Melbourne and Surroundings</h3>
-            <p>Melbourne, in Victoria, is famous for its art, music, food, and coffee culture. Explore the city’s laneways for street art, boutique shops, and cafés, or enjoy cultural venues like the National Gallery of Victoria and the Melbourne Museum. Day trips from Melbourne include the Yarra Valley for wine tasting, the Great Ocean Road for scenic coastal drives and the Twelve Apostles, and Phillip Island to see the famous penguin parade.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./Autralia-Melborne.jpeg');"></div>
+      <div class="place-info">
+        <h3>Melbourne and Surroundings</h3>
+        <p>Melbourne, in Victoria, is famous for its art, music, food, and coffee culture. Explore the city’s laneways
+          for street art, boutique shops, and cafés, or enjoy cultural venues like the National Gallery of Victoria and
+          the Melbourne Museum. Day trips from Melbourne include the Yarra Valley for wine tasting, the Great Ocean Road
+          for scenic coastal drives and the Twelve Apostles, and Phillip Island to see the famous penguin parade.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./Australia-Rainforest.jpeg');"></div>
-        <div class="place-info">
-            <h3>Daintree Rainforest and Cape Tribulation</h3>
-            <p>The Daintree Rainforest, part of Queensland’s tropical north, is one of the oldest rainforests in the world. Visitors can hike among ancient trees, spot unique wildlife such as cassowaries, and take river cruises to see saltwater crocodiles. Cape Tribulation, where the rainforest meets the reef, offers guided walks, wildlife spotting, and cultural experiences with local Aboriginal communities.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./Australia-Rainforest.jpeg');"></div>
+      <div class="place-info">
+        <h3>Daintree Rainforest and Cape Tribulation</h3>
+        <p>The Daintree Rainforest, part of Queensland’s tropical north, is one of the oldest rainforests in the world.
+          Visitors can hike among ancient trees, spot unique wildlife such as cassowaries, and take river cruises to see
+          saltwater crocodiles. Cape Tribulation, where the rainforest meets the reef, offers guided walks, wildlife
+          spotting, and cultural experiences with local Aboriginal communities.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
@@ -301,5 +363,31 @@ h1, h2, h3 {
 
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
+
 </body>
+
 </html>

@@ -189,3 +189,27 @@ document.querySelectorAll('.popular__card').forEach(card => {
     if (link) window.location.href = link;
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  let lastScroll = 0;
+  const header = document.querySelector('header');
+  
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 50) {
+      header.classList.remove('hide-nav');
+      lastScroll = currentScroll;
+      return;
+    }
+    
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      header.classList.add('hide-nav');
+    } else if (currentScroll < lastScroll) {
+      header.classList.remove('hide-nav');
+    }
+    
+    lastScroll = currentScroll;
+  });
+});
+

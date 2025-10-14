@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Honoring Excellence and Achievement - Phantom Global</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../New folder/Favicon (2).png" type="image/png">
   <style>
     body {
       margin: 0;
       font-family: 'Oswald', sans-serif;
       background-color: #ffffff;
       color: #000000;
+    }
+
+    header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: transform 0.4s ease;
+      z-index: 9999;
+      background-color: none;
+      box-shadow: none;
+    }
+
+    header.hide-nav {
+      transform: translateY(-100%);
+    }
+
+    body {
+      padding-top: 100px;
     }
 
     /* Banner */
@@ -29,7 +50,7 @@
       font-size: 42px;
       text-align: center;
       padding: 0 15px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      text-shadow: none;
     }
 
     /* Section */
@@ -40,7 +61,8 @@
     }
 
     .section h2 {
-      color: #00ffee; /* sky blue */
+      color: #00ffee;
+      /* sky blue */
       font-size: 36px;
       margin-bottom: 20px;
       text-align: center;
@@ -63,11 +85,12 @@
     }
 
     .card {
-      background-color: #f0f8ff; /* light sky-blue tint */
+      background-color: #f0f8ff;
+      /* light sky-blue tint */
       border-radius: 10px;
       overflow: hidden;
       width: 300px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: none;
       transition: transform 0.3s;
     }
 
@@ -112,53 +135,52 @@
     }
 
     /* Mobile Responsive */
-@media (max-width: 768px) {
-  .banner {
-    height: 200px;
-  }
+    @media (max-width: 768px) {
+      .banner {
+        height: 200px;
+      }
 
-  .banner h1 {
-    font-size: 32px;
-    text-align: center;
-    padding: 0 10px;
-  }
+      .banner h1 {
+        font-size: 32px;
+        text-align: center;
+        padding: 0 10px;
+      }
 
-  .section {
-    padding: 30px 15px;
-  }
+      .section {
+        padding: 30px 15px;
+      }
 
-  .section h2 {
-    font-size: 28px;
-  }
+      .section h2 {
+        font-size: 28px;
+      }
 
-  .section p {
-    font-size: 16px;
-    max-width: 100%;
-  }
+      .section p {
+        font-size: 16px;
+        max-width: 100%;
+      }
 
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .card {
-    width: 90%;
-  }
+      .card {
+        width: 90%;
+      }
 
-  .card-content h3 {
-    font-size: 20px;
-  }
+      .card-content h3 {
+        font-size: 20px;
+      }
 
-  .card-content p {
-    font-size: 14px;
-  }
-}
-
-
+      .card-content p {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
+
 <body>
-    <header>
+  <header>
     <a href="../../main.html" class="brand">
 
       <img src="../../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -181,25 +203,29 @@
     </div>
   </header>
 
-<link rel="stylesheet" href="../../main.css">
-<script src="../../main.js"></script>
- <div class="banner">
+  <link rel="stylesheet" href="../../main.css">
+  <script src="../../main.js"></script>
+  <div class="banner">
     <h1>About Us</h1>
   </div>
 
   <!-- About Section -->
   <div class="section">
     <h2>Welcome to Phantom Global</h2>
-    <p>Phantom Global is your ultimate travel companion. We specialize in creating unforgettable travel experiences, combining breathtaking destinations with personalized services. Our team of travel experts ensures every journey is seamless, safe, and full of memories that last a lifetime.</p>
+    <p>Phantom Global is your ultimate travel companion. We specialize in creating unforgettable travel experiences,
+      combining breathtaking destinations with personalized services. Our team of travel experts ensures every journey
+      is seamless, safe, and full of memories that last a lifetime.</p>
   </div>
 
   <!-- Our Values Cards -->
   <div class="section">
     <h2>Our Core Values</h2>
     <div class="card-container">
-      
+
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1620720970374-5b7e67e1e610?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWElMjB0cmF2ZWx8ZW58MHx8MHx8fDA%3D" alt="Adventure">
+        <img
+          src="https://images.unsplash.com/photo-1620720970374-5b7e67e1e610?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWElMjB0cmF2ZWx8ZW58MHx8MHx8fDA%3D"
+          alt="Adventure">
         <div class="card-content">
           <h3>Adventure</h3>
           <p>We embrace the spirit of adventure, taking you to hidden gems and iconic destinations worldwide.</p>
@@ -207,7 +233,8 @@
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Safety">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+          alt="Safety">
         <div class="card-content">
           <h3>Safety</h3>
           <p>Your safety is our priority. We ensure safe travel with trusted partners and expert guidance.</p>
@@ -215,7 +242,9 @@
       </div>
 
       <div class="card">
-        <img src="https://img.freepik.com/free-photo/immersive-experience-concept-collage_23-2149498345.jpg?semt=ais_incoming&w=740&q=80" alt="Experience">
+        <img
+          src="https://img.freepik.com/free-photo/immersive-experience-concept-collage_23-2149498345.jpg?semt=ais_incoming&w=740&q=80"
+          alt="Experience">
         <div class="card-content">
           <h3>Experience</h3>
           <p>Every trip is tailored to provide unique experiences, combining culture, nature, and relaxation.</p>
@@ -225,12 +254,36 @@
     </div>
   </div>
 
-    <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
 
 
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">
         <img src="../../New folder/logo2.png" alt="Truly Sri Lanka">
@@ -311,9 +364,10 @@
       <h6>© 2025 Phanthom Global, All Rights Reserved</h6>
     </div>
 
-</footer>
+  </footer>
 
 
 
 </body>
+
 </html>

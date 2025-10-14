@@ -1,130 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Discover New Zealand</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover New Zealand</title>
+  <link rel="icon" href="../New folder/Favicon (2).png" type="image/png">
 
-   body {
-    margin: 0;
-    font-family: 'Oswald', Arial, sans-serif; /* Default font */
-    line-height: 1.6;
-    background-color:#ffffff;
-    color: #fff;
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
 
-h1, h2, h3 {
-    font-family: 'Oswald', cursive;  /* Fancy font for headings */
-}
+    body {
+      margin: 0;
+      font-family: 'Oswald', Arial, sans-serif;
+      /* Default font */
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #fff;
+    }
 
-.video-container {
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        overflow: hidden;
+    h1,
+    h2,
+    h3 {
+      font-family: 'Oswald', cursive;
+      /* Fancy font for headings */
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
     }
 
     .video-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    
+
     .video-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 4vw;
-        font-weight: bold;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        text-align: center;
-        max-width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 4vw;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      max-width: 90%;
     }
 
     .about-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px 20px;
-    background: rgba(0, 0, 0, 0.6); 
-    border-radius: 15px;
-    color: #fff; 
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
-    box-shadow: 0 8px 20px rgba(6, 10, 10, 0.5);
-}
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      box-shadow: 0 8px 20px rgba(6, 10, 10, 0.5);
+    }
 
-.about-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffd166; 
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-}
+    header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: transform 0.4s ease;
+      z-index: 9999;
+      background-color: none;
+      box-shadow: none;
+    }
 
-.about-section p {
-    font-family: 'Oswald';
-    text-indent: 30px; 
-}
+    header.hide-nav {
+      transform: translateY(-100%);
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+
+
+
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffd166;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .about-section p {
+      font-family: 'Oswald';
+      text-indent: 30px;
+    }
 
     .places {
-        padding: 3rem 2rem;
-        background-color: #fffefe;
-    }
-    .places h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-        color: #080000;
-    }
-    .place-card {
-        background-color: #005758;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    .place-image {
-        flex: 1 1 300px;
-        min-height: 250px;
-        background-size: cover;
-        background-position: center;
-    }
-    .place-info {
-        flex: 1 1 300px;
-        padding: 1.5rem;
-    }
-    .place-info h3 {
-        margin-top: 0;
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: #00f5f5;
-    }
-    .place-info p {
-        line-height: 1.6;
-        color: #ddd;
-        white-space: pre-line;
-        text-align: justify;
+      padding: 3rem 2rem;
+      background-color: #fffefe;
     }
 
-    
-    @media(max-width:768px){
-        .place-card {
-            flex-direction: column;
-        }
+    .places h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #080000;
     }
-</style>
+
+    .place-card {
+      background-color: #005758;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .place-image {
+      flex: 1 1 300px;
+      min-height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .place-info {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+    }
+
+    .place-info h3 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00f5f5;
+    }
+
+    .place-info p {
+      line-height: 1.6;
+      color: #ddd;
+      white-space: pre-line;
+      text-align: justify;
+    }
+
+
+    @media(max-width:768px) {
+      .place-card {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-        <header>
+  <header>
     <a href="../main.html" class="brand">
 
       <img src="../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -147,79 +184,104 @@ h1, h2, h3 {
     </div>
   </header>
 
-<link rel="stylesheet" href="../main.css">
-<script src="../main.js"></script>
+  <link rel="stylesheet" href="../main.css">
+  <script src="../main.js"></script>
 
 
-<div class="video-container">
+  <div class="video-container">
     <video autoplay muted loop>
-        <source src="./new zeland vedio.webm" type="video/mp4">
-        Your browser does not support the video tag.
+      <source src="./new zeland vedio.webm" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <div class="video-text">
-        <h1>New Zealand</h1>
+      <h1>New Zealand</h1>
     </div>
-</div>
+  </div>
 
-<div class="about-section">
-    
+  <div class="about-section">
+
     <p>
-        New Zealand, an island country in the South Pacific Ocean, the southwesternmost part of Polynesia. 
-        It is a remote land—one of the last sizable territories suitable for habitation to be populated and settled—and lies more than 1,000 miles (1,600 km) southeast of Australia, its nearest neighbour. 
-        The country comprises two main islands—the North and the South Island—and a number of small islands, some of them hundreds of miles from the main group. 
-        The capital city is Wellington and the largest urban area Auckland; both are located on the North Island. 
-        New Zealand administers the South Pacific island group of Tokelau and claims a section of the Antarctic continent. 
-        Niue and the Cook Islands are self-governing states in free association with New Zealand.
+      New Zealand, an island country in the South Pacific Ocean, the southwesternmost part of Polynesia.
+      It is a remote land—one of the last sizable territories suitable for habitation to be populated and settled—and
+      lies more than 1,000 miles (1,600 km) southeast of Australia, its nearest neighbour.
+      The country comprises two main islands—the North and the South Island—and a number of small islands, some of them
+      hundreds of miles from the main group.
+      The capital city is Wellington and the largest urban area Auckland; both are located on the North Island.
+      New Zealand administers the South Pacific island group of Tokelau and claims a section of the Antarctic continent.
+      Niue and the Cook Islands are self-governing states in free association with New Zealand.
     </p>
-</div>
+  </div>
 
 
 
-<section class="places">
+  <section class="places">
     <h2>Best Places to Visit</h2>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./image\ 01-Rotorua-NewZealand.jpeg');"></div>
-        <div class="place-info">
-            <h3>Rotorua</h3>
-            <p>On the central North Island, Rotorua is famous for its geothermal features and Maori culture. Travelers short on time can visit on a day trip from Auckland, but it’s a convenient stop when traveling through the North Island. Hell’s Gate, Wai-O-Tapu, or Orakei Korako (on the way to Taupo) are good options for bubbling mud pools, boiling geysers, and colorful rock formations, and many resorts and holiday parks in the area have hot spring bathing facilities. You can also learn more about Maori culture at tourist villages like Mitai, Whakarewarewa, and Tamaki with their cultural shows of traditional music and dancing and a hangi meal cooked in an underground pit.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./image\ 01-Rotorua-NewZealand.jpeg');"></div>
+      <div class="place-info">
+        <h3>Rotorua</h3>
+        <p>On the central North Island, Rotorua is famous for its geothermal features and Maori culture. Travelers short
+          on time can visit on a day trip from Auckland, but it’s a convenient stop when traveling through the North
+          Island. Hell’s Gate, Wai-O-Tapu, or Orakei Korako (on the way to Taupo) are good options for bubbling mud
+          pools, boiling geysers, and colorful rock formations, and many resorts and holiday parks in the area have hot
+          spring bathing facilities. You can also learn more about Maori culture at tourist villages like Mitai,
+          Whakarewarewa, and Tamaki with their cultural shows of traditional music and dancing and a hangi meal cooked
+          in an underground pit.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./Hokinga-NewZealand.jpeg');"></div>
-        <div class="place-info">
-            <h3>Hokianga Harbour</h3>
-            <p>The Hokianga Harbour is an alternative to the Bay of Islands. Though it is often overlooked by travelers, it is perfect for camping or RV adventures. The area is sparsely populated and predominantly Maori. Dune boarding, hiking, horse trekking, and dolphin watching are popular activities in the Hokianga. Base yourself in one of the nearby villages of Omapere, Opononi, and Rawene. To expand your exploration, the Waipoua Forest, just south of the Hokianga, is home to two of the largest living native kauri trees.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./Hokinga-NewZealand.jpeg');"></div>
+      <div class="place-info">
+        <h3>Hokianga Harbour</h3>
+        <p>The Hokianga Harbour is an alternative to the Bay of Islands. Though it is often overlooked by travelers, it
+          is perfect for camping or RV adventures. The area is sparsely populated and predominantly Maori. Dune
+          boarding, hiking, horse trekking, and dolphin watching are popular activities in the Hokianga. Base yourself
+          in one of the nearby villages of Omapere, Opononi, and Rawene. To expand your exploration, the Waipoua Forest,
+          just south of the Hokianga, is home to two of the largest living native kauri trees.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./Newzealand-Waitangi.jpeg');"></div>
-        <div class="place-info">
-            <h3>Waitangi</h3>
-            <p>Waitangi is one of the most significant places in New Zealand's modern history. In 1840, Maori chiefs signed a treaty with representatives of the British Crown, the Treaty of Waitangi, a founding document that gave the sovereignty of New Zealand to British rule. Visit for a crash course in the country's history in this beautiful coastal location. The Waitangi Treaty Grounds include an indoor museum, the Treaty House, an ornately carved marae (Maori meeting house), and a ceremonial waka (canoe) spread over a large area. There are beautiful views of the Bay of Islands.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./Newzealand-Waitangi.jpeg');"></div>
+      <div class="place-info">
+        <h3>Waitangi</h3>
+        <p>Waitangi is one of the most significant places in New Zealand's modern history. In 1840, Maori chiefs signed
+          a treaty with representatives of the British Crown, the Treaty of Waitangi, a founding document that gave the
+          sovereignty of New Zealand to British rule. Visit for a crash course in the country's history in this
+          beautiful coastal location. The Waitangi Treaty Grounds include an indoor museum, the Treaty House, an
+          ornately carved marae (Maori meeting house), and a ceremonial waka (canoe) spread over a large area. There are
+          beautiful views of the Bay of Islands.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./image04-Coromandel\ Peninsula-NewZealand.jpeg');"></div>
-        <div class="place-info">
-            <h3>Coromandel Peninsula</h3>
-            <p>The Coromandel Peninsula reaches 50 miles into the Hauraki Gulf, across the Firth of Thames from Auckland. It’s a microcosm of all that’s good in northern New Zealand—stunning beaches, hiking trails, and arty, laid-back towns. During low tide at Hot Water Beach, dig a few inches beneath the sand to create your own natural hot spring bath, spend the day at Cathedral Cove, one of New Zealand’s most beautiful beaches (which is saying something), and hike the Pinnacles Walk or Coromandel Coastal Walkway.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./image04-Coromandel\ Peninsula-NewZealand.jpeg');"></div>
+      <div class="place-info">
+        <h3>Coromandel Peninsula</h3>
+        <p>The Coromandel Peninsula reaches 50 miles into the Hauraki Gulf, across the Firth of Thames from Auckland.
+          It’s a microcosm of all that’s good in northern New Zealand—stunning beaches, hiking trails, and arty,
+          laid-back towns. During low tide at Hot Water Beach, dig a few inches beneath the sand to create your own
+          natural hot spring bath, spend the day at Cathedral Cove, one of New Zealand’s most beautiful beaches (which
+          is saying something), and hike the Pinnacles Walk or Coromandel Coastal Walkway.</p>
+      </div>
     </div>
 
     <div class="place-card">
-        <div class="place-image" style="background-image: url('./image\ 05-Tongariro\ National\ Park-NewZealand.jpeg');"></div>
-        <div class="place-info">
-            <h3>Tongariro National Park</h3>
-            <p>On the high central plateau of central North Island, Tongariro National Park is a dual UNESCO World Heritage Site, listed both for its natural and cultural significance. Most sights and activities revolve around three volcanic peaks: Mounts Tongariro, Ruapehu, and Ngauruhoe. The Tongariro Alpine Crossing is a moderately challenging day hike that is spectacular. In winter, ski at the Whakapapa or Turoa ski fields.</p>
-        </div>
+      <div class="place-image" style="background-image: url('./image\ 05-Tongariro\ National\ Park-NewZealand.jpeg');">
+      </div>
+      <div class="place-info">
+        <h3>Tongariro National Park</h3>
+        <p>On the high central plateau of central North Island, Tongariro National Park is a dual UNESCO World Heritage
+          Site, listed both for its natural and cultural significance. Most sights and activities revolve around three
+          volcanic peaks: Mounts Tongariro, Ruapehu, and Ngauruhoe. The Tongariro Alpine Crossing is a moderately
+          challenging day hike that is spectacular. In winter, ski at the Whakapapa or Turoa ski fields.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
@@ -307,5 +369,31 @@ h1, h2, h3 {
 
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
+
 </body>
+
 </html>

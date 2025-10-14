@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="../../New folder/Favicon (2).png" type="image/png">
 
   <title>Heritage & Culture Travel - Phantom Global</title>
   <style>
@@ -21,17 +24,41 @@
       font-family: 'Oswald', sans-serif;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: 'Oswald', sans-serif;
       letter-spacing: 1px;
     }
+
+    header {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: transform 0.4s ease;
+      z-index: 9999;
+      background-color: none;
+      box-shadow: none;
+    }
+
+    header.hide-nav {
+      transform: translateY(-100%);
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+
+
 
     /* Banner */
     .banner {
       position: relative;
       width: 100%;
       height: 70vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://travel.home.sndimg.com/content/dam/images/travel/fullset/2012/05/07/2f/italy-unesco-sites_ss_001.jpg.rend.hgtvcom.1280.960.suffix/1491583009875.jpeg") center/cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -66,7 +93,7 @@
       font-weight: bold;
       letter-spacing: 0.5px;
       transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .banner a:hover {
@@ -111,13 +138,13 @@
       background: #f9f9f9;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     }
 
     .card img {
@@ -167,7 +194,7 @@
       margin: 3rem auto;
       width: 90%;
       max-width: 1000px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .cta h2 {
@@ -203,118 +230,118 @@
 
 
     /* Tablet view */
-@media (max-width: 768px) {
-  .banner {
-    height: 55vh;
-    padding: 1.5rem;
-  }
+    @media (max-width: 768px) {
+      .banner {
+        height: 55vh;
+        padding: 1.5rem;
+      }
 
-  .banner h1 {
-    font-size: 2rem;
-  }
+      .banner h1 {
+        font-size: 2rem;
+      }
 
-  .banner p {
-    font-size: 1rem;
-  }
+      .banner p {
+        font-size: 1rem;
+      }
 
-  .banner a {
-    padding: 0.6rem 1.4rem;
-    font-size: 0.9rem;
-  }
+      .banner a {
+        padding: 0.6rem 1.4rem;
+        font-size: 0.9rem;
+      }
 
-  h2 {
-    font-size: 1.8rem;
-  }
+      h2 {
+        font-size: 1.8rem;
+      }
 
-  .card-content h3 {
-    font-size: 1.2rem;
-  }
+      .card-content h3 {
+        font-size: 1.2rem;
+      }
 
-  .card-content p {
-    font-size: 0.9rem;
-  }
+      .card-content p {
+        font-size: 0.9rem;
+      }
 
-  .card-content ul {
-    font-size: 0.85rem;
-  }
+      .card-content ul {
+        font-size: 0.85rem;
+      }
 
-  .cta {
-    padding: 2rem 1rem;
-  }
+      .cta {
+        padding: 2rem 1rem;
+      }
 
-  .cta h2 {
-    font-size: 1.5rem;
-  }
+      .cta h2 {
+        font-size: 1.5rem;
+      }
 
-  .cta p {
-    font-size: 1rem;
-  }
+      .cta p {
+        font-size: 1rem;
+      }
 
-  .cta a {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
-  }
-}
+      .cta a {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
 
-/* Mobile view */
-@media (max-width: 480px) {
-  .banner {
-    height: 50vh;
-    padding: 1rem;
-  }
+    /* Mobile view */
+    @media (max-width: 480px) {
+      .banner {
+        height: 50vh;
+        padding: 1rem;
+      }
 
-  .banner h1 {
-    font-size: 1.6rem;
-  }
+      .banner h1 {
+        font-size: 1.6rem;
+      }
 
-  .banner p {
-    font-size: 0.9rem;
-  }
+      .banner p {
+        font-size: 0.9rem;
+      }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+      h2 {
+        font-size: 1.5rem;
+      }
 
-  .card img {
-    height: 180px;
-  }
+      .card img {
+        height: 180px;
+      }
 
-  .card-content {
-    padding: 1rem;
-  }
+      .card-content {
+        padding: 1rem;
+      }
 
-  .card-content h3 {
-    font-size: 1.1rem;
-  }
+      .card-content h3 {
+        font-size: 1.1rem;
+      }
 
-  .card-content p,
-  .card-content ul {
-    font-size: 0.85rem;
-  }
+      .card-content p,
+      .card-content ul {
+        font-size: 0.85rem;
+      }
 
-  .cta {
-    padding: 1.5rem 1rem;
-  }
+      .cta {
+        padding: 1.5rem 1rem;
+      }
 
-  .cta h2 {
-    font-size: 1.3rem;
-  }
+      .cta h2 {
+        font-size: 1.3rem;
+      }
 
-  .cta p {
-    font-size: 0.9rem;
-  }
+      .cta p {
+        font-size: 0.9rem;
+      }
 
-  .cta a {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-  }
-}
-
+      .cta a {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-    <header>
+  <header>
     <a href="../../main.html" class="brand">
 
       <img src="../../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -337,12 +364,12 @@
     </div>
   </header>
 
-<link rel="stylesheet" href="../../main.css">
-<script src="../../main.js"></script>
+  <link rel="stylesheet" href="../../main.css">
+  <script src="../../main.js"></script>
 
   <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
   <!-- Banner -->
   <section class="banner">
@@ -358,7 +385,8 @@
 
       <!-- New Zealand -->
       <div class="card">
-        <img src="https://t4.ftcdn.net/jpg/05/48/47/53/360_F_548475359_xA1hkNygGN1uapeoifIEu4TPyQgJorjd.jpg" alt="New Zealand Heritage">
+        <img src="https://t4.ftcdn.net/jpg/05/48/47/53/360_F_548475359_xA1hkNygGN1uapeoifIEu4TPyQgJorjd.jpg"
+          alt="New Zealand Heritage">
         <div class="card-content">
           <h3>New Zealand</h3>
           <p>Experience Maori culture and historic sites across New Zealand.</p>
@@ -372,7 +400,9 @@
 
       <!-- Australia -->
       <div class="card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1VRJWMX8x9Q23YL3tJyEFeRo0pq55k-ePZC9SxPzz-4zzqlKg-lFNYU-5Fb0gDb1KGrNJkOAC3yBqo4Y0FhYRaoPm4UFa_TCzZRl0ztQ2PJDasijgptcDbuhz_LJc9ouy5zo9IWrcRant/s1600/australia_culture1.jpg" alt="Australia Heritage">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1VRJWMX8x9Q23YL3tJyEFeRo0pq55k-ePZC9SxPzz-4zzqlKg-lFNYU-5Fb0gDb1KGrNJkOAC3yBqo4Y0FhYRaoPm4UFa_TCzZRl0ztQ2PJDasijgptcDbuhz_LJc9ouy5zo9IWrcRant/s1600/australia_culture1.jpg"
+          alt="Australia Heritage">
         <div class="card-content">
           <h3>Australia</h3>
           <p>Discover Indigenous heritage, museums, and historical landmarks.</p>
@@ -386,7 +416,9 @@
 
       <!-- Canada -->
       <div class="card">
-        <img src="https://img.freepik.com/free-photo/canada-day-celebration-with-maple-leaf-symbol_23-2151440527.jpg?semt=ais_incoming&w=740&q=80" alt="Canada Heritage">
+        <img
+          src="https://img.freepik.com/free-photo/canada-day-celebration-with-maple-leaf-symbol_23-2151440527.jpg?semt=ais_incoming&w=740&q=80"
+          alt="Canada Heritage">
         <div class="card-content">
           <h3>Canada</h3>
           <p>Canada offers rich multicultural heritage and historic cities.</p>
@@ -400,7 +432,8 @@
 
       <!-- Switzerland -->
       <div class="card">
-        <img src="https://madeinbern.com/fileadmin/_processed_/7/1/csm_maennlichen-jungfrau-region_abbb231553.jpg" alt="Switzerland Heritage">
+        <img src="https://madeinbern.com/fileadmin/_processed_/7/1/csm_maennlichen-jungfrau-region_abbb231553.jpg"
+          alt="Switzerland Heritage">
         <div class="card-content">
           <h3>Switzerland</h3>
           <p>From alpine traditions to historic cities, experience Swiss heritage.</p>
@@ -414,7 +447,9 @@
 
       <!-- UK -->
       <div class="card">
-        <img src="https://i0.wp.com/conservativepost.co.uk/wp-content/uploads/2023/02/APOLOND-OFFICIAL-20220602-066-078.jpg.iCfsmNzPMWATAA.CP0RQsyr62.jpeg?fit=1200%2C802&ssl=1" alt="UK Heritage">
+        <img
+          src="https://i0.wp.com/conservativepost.co.uk/wp-content/uploads/2023/02/APOLOND-OFFICIAL-20220602-066-078.jpg.iCfsmNzPMWATAA.CP0RQsyr62.jpeg?fit=1200%2C802&ssl=1"
+          alt="UK Heritage">
         <div class="card-content">
           <h3>United Kingdom</h3>
           <p>Historic landmarks, castles, and cultural experiences await in the UK.</p>
@@ -436,7 +471,7 @@
     <a href="../PlanTrip/index.html">Book Now</a>
   </section>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">
         <img src="../../New folder/logo2.png" alt="Truly Sri Lanka">
@@ -518,6 +553,32 @@
     </div>
 
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let lastScroll = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 50) {
+          header.classList.remove('hide-nav');
+          lastScroll = currentScroll;
+          return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.classList.add('hide-nav');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-nav');
+        }
+
+        lastScroll = currentScroll;
+      });
+    });
+  </script>
+
 
 </body>
+
 </html>
