@@ -256,3 +256,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 250);
   });
 });
+
+
+// Subscribe Form Validation
+document.addEventListener("DOMContentLoaded", () => {
+  const subscribeForm = document.querySelector(".subscribe__container form");
+  const emailInput = subscribeForm.querySelector("input");
+  const subscribeBtn = subscribeForm.querySelector("button");
+
+  subscribeForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop page reload
+
+    if (emailInput.value.trim() === "") {
+      alert("Please enter your email before subscribing!");
+    } else {
+      alert("Thank you for subscribing! 🎉");
+      emailInput.value = ""; // Clear field
+    }
+  });
+});
