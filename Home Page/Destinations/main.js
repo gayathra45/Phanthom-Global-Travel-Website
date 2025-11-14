@@ -165,6 +165,8 @@ ScrollReveal().reveal('.choose__content .section__header', { ...scrollRevealOpti
 ScrollReveal().reveal('.choose__list li', { ...scrollRevealOption, interval: 200 });
 
 
+
+// Search Box 
 document.addEventListener("DOMContentLoaded", function() {
     flatpickr("#calendarInput", {
       dateFormat: "d-m-Y",
@@ -175,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.querySelector('.search-box .btn').addEventListener('click', function() {
-  const sectionId = document.getElementById('country').value; // "package-Australia"
+  const sectionId = document.getElementById('country').value; 
   if (!sectionId) return;
   const section = document.getElementById(sectionId);
   if (section) {
@@ -190,6 +192,8 @@ document.querySelectorAll('.popular__card').forEach(card => {
   });
 });
 
+
+// Hide/Show Navigation on Scroll
 document.addEventListener('DOMContentLoaded', function() {
   let lastScroll = 0;
   const header = document.querySelector('header');

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Now – Tourism</title>
+  <link rel="icon" href="../../../New folder/Favicon (2).png" type="image/png">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f0f8ff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HERO IMAGE */
+    .hero-section {
+      background: linear-gradient(rgba(0, 61, 54, 0.453), rgba(0, 61, 54, 0.453)), url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200") center/cover no-repeat;
+      height: 65vh;
+      width: 100%;
+      position: relative;
+    }
+
+    /* HERO CONTENT */
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      max-width: 600px;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    /* APPLY NOW BOX */
+    .apply-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 280px;
+      box-shadow: 0 8px 20px rgba(7, 204, 244, 0.3);
+      color: #111;
+      text-align: left;
+      z-index: 3;
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideFadeIn 1s forwards 0.5s;
+    }
+
+    .apply-box h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #003366;
+    }
+
+    .apply-box p {
+      margin: 0 0 5px;
+      color: #0066cc;
+      font-weight: bold;
+    }
+
+    .apply-box span {
+      font-size: 13px;
+      line-height: 1.4;
+      color: #333;
+    }
+
+    .apply-box:hover {
+      transform: translateX(0) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 128, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* SUCCESS MESSAGE */
+    .success-message {
+      background: linear-gradient(135deg, #4BB543 0%, #3aa037 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 8px 20px rgba(75, 181, 67, 0.4);
+      display: none;
+      animation: slideDown 0.5s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .success-message h3 {
+      margin: 0 0 10px 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .success-message p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    /* FORM */
+    form {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 40px auto 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 128, 0.1);
+    }
+
+    form h2 {
+      background: #02e4d5d8;
+      color: white;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .d label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    .d input {
+      width: 97.2%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .row2 {
+      display: flex;
+      gap: 15px;
+      align-items: flex-end;
+    }
+
+    .row2 .d {
+      flex: 1;
+    }
+
+    .row2 .d input[type="file"] {
+      width: 95%;
+      padding: 7.5px;
+    }
+
+    .d select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .d.error .intt {
+      border: 2px solid #f60909;
+      animation: shake 0.3s;
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-5px);
+      }
+
+      75% {
+        transform: translateX(5px);
+      }
+    }
+
+    .rb .l1 span.rb-error,
+    .rb .l2 span.rb-error {
+      border: 2px solid #f60909;
+      animation: shake 0.3s;
+    }
+
+    .d input:focus,
+    .d select:focus,
+    .d textarea:focus {
+      border-color: #003366;
+      box-shadow: 0 0 8px rgba(0, 0, 128, 0.3);
+      outline: none;
+    }
+
+    .d textarea {
+      resize: vertical;
+    }
+
+    .d .di {
+      font-size: 12px;
+      color: #d93025;
+      text-align: left;
+      margin: 3px 0 10px;
+      display: none;
+    }
+
+    .d.error .di {
+      display: block;
+    }
+
+    .rb label {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .rb label input {
+      display: none;
+    }
+
+    .rb .l1 span {
+      position: relative;
+      display: inline-block;
+      margin-top: 5px;
+      padding: 10px;
+      width: 375px;
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #000000;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .rb .l2 span {
+      position: relative;
+      display: inline-block;
+      margin-top: 5px;
+      padding: 10px;
+      width: 375px;
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #000000;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .rb label input:checked~span.yes {
+      color: #003366;
+      border: 2px solid #003366;
+      box-shadow: 0 0 10px rgba(0, 0, 128, 0.3);
+      background: #e6f2ff;
+    }
+
+    .rb label input:checked~span.no {
+      color: #003366;
+      border: 2px solid #003366;
+      box-shadow: 0 0 10px rgba(0, 0, 128, 0.3);
+      background: #e6f2ff;
+    }
+
+    .bk {
+      margin-top: 20px;
+      margin-right: 10px;
+      padding: 12px 25px;
+      background: #005953c6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .bk:hover {
+      background: #00bdba;
+      transform: scale(1.05);
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #005953c6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00bdba;
+      transform: scale(1.05);
+    }
+
+    .btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-link {
+      text-decoration: none;
+      color: white;
+    }
+
+    .btn-link:visited {
+      color: white;
+    }
+
+    #fn,
+    #nt {
+      display: none;
+    }
+
+    /* LOADING SPINNER */
+    .spinner {
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #fff;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .btn.loading .spinner {
+      display: inline-block;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #aad4ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .apply-box {
+      margin-top: 120px;
+    }
+
+    /* PROGRESS INDICATOR */
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: #e0e0e0;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #02e4d5d8, #005953c6);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px) {
+      .hero-section {
+        height: 40vh;
+      }
+
+      .apply-box {
+        position: static;
+        margin: 10px auto;
+        max-width: 90%;
+      }
+
+      form {
+        width: 95%;
+        padding: 15px;
+      }
+
+      .rb .l1 span,
+      .rb .l2 span {
+        width: 100%;
+      }
+
+      .row2 {
+        flex-direction: column;
+      }
+
+      .row2 .d input[type="file"] {
+        width: 97.2%;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="../../../main.html" class="brand">
+      <img src="../../../New folder/logo2.png" alt="Phantom Global Logo" class="brand-logo">
+      Phantom Global
+    </a>
+
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="../../../main.html">Home</a>
+        <a href="../../../AboutUsPage/index.html">About Us</a>
+        <a href="../../../Destinations/index.html">Destinations</a>
+        <a href="../../../ContactUs/contactus1.html">Contact Us</a>
+        <a href="../../../PlanYourTrip/index.html">Plan Your Trip</a>
+      </div>
+    </div>
+  </header>
+
+  <link rel="stylesheet" href="../../../main.css">
+  <script src="../../../main.js"></script>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Join our family</h1>
+      <p>Fill in the form below to apply!</p>
+    </div>
+    <div class="apply-box">
+      <p>Join our family</p>
+      <h2>Apply Now!</h2>
+      <span>Our team is ready to assist you. Fill the form below to start your application!</span>
+    </div>
+  </div>
+
+  <div class="success-message" id="successMessage">
+    <h3>✓ Application Successfully Submitted!</h3>
+    <p>Thank you for your application. We will review it and get back to you soon.</p>
+  </div>
+
+  <form action="#" id="applicationForm">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <h2>Applicant Information</h2>
+
+    <div class="d">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" class="intt" required>
+      <div class="di">Full Name can't be blank</div>
+    </div>
+
+    <div class="d"><label>Any Other Name *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q0" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q0" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d" id="fn">
+      <label for="name1">Other Name *</label>
+      <input type="text" id="name1" name="name1" class="intt">
+      <div class="di">Other Name can't be blank</div>
+    </div>
+
+    <div class="d" id="nt">
+      <label for="ntype">Name type *</label>
+      <select id="ntype" name="ntype" class="intt">
+        <option value="">-- Select --</option>
+        <option value="Birth">Birth</option>
+        <option value="Marriage">Marriage</option>
+        <option value="Preferred">Preferred</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="di">Please select name type</div>
+    </div>
+
+    <div class="d">
+      <label for="dob">Date of Birth *</label>
+      <input type="date" id="dob" name="dob" class="intt" required>
+      <div class="di">Date of Birth can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="gender">Gender *</label>
+      <select id="gender" name="gender" class="intt" required>
+        <option value="">-- Select --</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="di">Please select your gender</div>
+    </div>
+
+    <div class="d">
+      <label for="Title">Title *</label>
+      <select id="Title" name="Title" class="intt" required>
+        <option value="">-- Select --</option>
+        <option value="MISS">MISS</option>
+        <option value="MR">MR</option>
+        <option value="MRS">MRS</option>
+        <option value="DR">DR</option>
+      </select>
+      <div class="di">Please select your title</div>
+    </div>
+
+    <div class="d">
+      <label for="relationship">Relationship Status *</label>
+      <select id="relationship" name="relationship" class="intt" required>
+        <option value="">-- Select --</option>
+        <option value="Married">Married</option>
+        <option value="Unmarried">Unmarried</option>
+      </select>
+      <div class="di">Please select your relationship status</div>
+    </div>
+
+    <div class="d">
+      <label for="Occupation">Occupation</label>
+      <input type="text" id="Occupation" name="Occupation" class="intt">
+    </div>
+
+    <div class="row2">
+      <div class="d">
+        <label for="NIC">NIC Number *</label>
+        <input type="text" id="NIC" name="NIC" class="intt" required>
+        <div class="di">NIC Number can't be blank</div>
+      </div>
+      <div class="d">
+        <label for="nicfile">NIC Copy</label>
+        <input type="file" id="nicfile" name="nicfile" class="intt" accept=".pdf,.jpg,.jpeg,.png">
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="d">
+        <label for="passport">Passport Number *</label>
+        <input type="text" id="passport" name="passport" class="intt" required>
+        <div class="di">Passport Number can't be blank</div>
+      </div>
+      <div class="d">
+        <label for="passportfile">Passport Copy</label>
+        <input type="file" id="passportfile" name="passportfile" class="intt" accept=".pdf,.jpg,.jpeg,.png">
+      </div>
+    </div>
+
+    <div class="d">
+      <label for="passportid">Passport Issued Date *</label>
+      <input type="date" id="passportid" name="passportid" class="intt" required>
+      <div class="di">Passport Issued Date can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="passported">Passport Expiry Date *</label>
+      <input type="date" id="passported" name="passported" class="intt" required>
+      <div class="di">Passport Expiry Date can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="profp">Profile Photo (jpg/jpeg, 500KB-3MB, 900x1200-2250x3000px)</label>
+      <input type="file" id="profp" name="profp" class="intt" accept=".jpg,.jpeg">
+    </div>
+
+    <br><br>
+
+    <h2>Contact Details</h2>
+
+    <div class="d">
+      <label for="address1">Address Line 1 *</label>
+      <input type="text" id="address1" name="address1" class="intt" required>
+      <div class="di">Address Line 1 can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="address2">Address Line 2 *</label>
+      <input type="text" id="address2" name="address2" class="intt" required>
+      <div class="di">Address Line 2 can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="city">City *</label>
+      <input type="text" id="city" name="city" class="intt" required>
+      <div class="di">City can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="state">State *</label>
+      <input type="text" id="state" name="state" class="intt" required>
+      <div class="di">State can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="zippostal">Zip/Postal Code *</label>
+      <input type="text" id="zippostal" name="zippostal" class="intt" required>
+      <div class="di">Zip/Postal Code can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" class="intt" required pattern="[0-9+\-\s()]+">
+      <div class="di">Please enter a valid phone number</div>
+    </div>
+
+    <div class="d">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" class="intt" required>
+      <div class="di">Please enter a valid email address</div>
+    </div>
+
+    <br><br>
+
+    <h2>Travel Information</h2>
+
+    <div class="d"><label>Do you have at least NZD $1000 available for each month *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q1" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q1" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d">
+      <label for="bankstatement">Bank Statement</label>
+      <input type="file" id="bankstatement" name="bankstatement" class="intt" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <div class="d"><label>Do you require a multiple journey visa *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q2" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q2" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d">
+      <label for="arridate">Estimated date of arrival in New Zealand *</label>
+      <input type="date" id="arridate" name="arridate" class="intt" required>
+      <div class="di">Estimated date of arrival can't be blank</div>
+    </div>
+
+    <div class="d">
+      <label for="dpardate">Estimated date of departure from New Zealand *</label>
+      <input type="date" id="dpardate" name="dpardate" class="intt" required>
+      <div class="di">Estimated date of departure can't be blank</div>
+    </div>
+
+    <br><br>
+
+    <h2>Character Details</h2>
+
+    <div class="d"><label>Have you ever been convicted of any offence? *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q3" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q3" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d"><label>Are you currently under investigation? *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q4" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q4" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d"><label>Have you ever been deported or refused entry to any country? *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q5" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q5" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d"><label>Have you ever been refused a visa or permit by any country? *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q6" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q6" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d">
+      <label for="policereport">Police Report</label>
+      <input type="file" id="policereport" name="policereport" class="intt" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <br><br>
+
+    <h2>Medical Condition</h2>
+
+    <div class="d"><label>Do you have tuberculosis? *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q7" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q7" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d"><label>Do you want Renal Dialysis treatment *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q8" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q8" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d"><label>Do you want Hospital Care *</label></div>
+    <div class="rb">
+      <label class="l1">
+        <input type="radio" name="q9" value="yes" class="rd">
+        <span class="yes">Yes</span>
+      </label>
+      <label class="l2">
+        <input type="radio" name="q9" value="no" class="rd">
+        <span class="no">No</span>
+      </label>
+    </div>
+
+    <div class="d">
+      <label for="medicalreport">Medical Report</label>
+      <input type="file" id="medicalreport" name="medicalreport" class="intt" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <button type="button" class="bk" onclick="history.back()">Back</button>
+    <button type="submit" class="btn" id="submitBtn">
+      Submit Application
+      <span class="spinner" id="spinner"></span>
+    </button>
+  </form>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="applynow.js"></script>
+
+  <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
+  <script src="../script.js"></script>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="logo">
+        <img src="../../../New folder/logo2.png" alt="Truly Sri Lanka">
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><b>Navigation</b></li>
+          <br>
+          <li><a href="../../../main.html">Home</a></li>
+          <li><a href="../../../AboutUsPage/index.html">About Us</a></li>
+          <li><a href="../../../Destinations/index.html">Destinations</a></li>
+          <li><a href="../../../ContactUs/contactus1.html">Contact Us</a></li>
+          <li><a href="../../../PlanYourTrip/index.html">Plan Your Trip</a></li>
+        </ul>
+        <ul>
+          <li><b>Tours</b></li>
+          <br>
+          <li><a href="../../../Categories/SunandBeach/index.html">Sun and Beach</a></li>
+          <li><a href="../../../Categories/WildLife/index.html">Wild Life and Safari</a></li>
+          <li><a href="../../../Categories/Nightlife/index.html">Night Life</a></li>
+          <li><a href="../../../Categories/Culture/index.html">Heritage and Culture</a></li>
+          <li><a href="../../../Categories/shopping/index.html">Shopping</a></li>
+          <li><a href="../../../Categories/Adventure/index.html">Adventure</a></li>
+          <li><a href="../../../Categories/sightseeing/index.html">Sightseeing</a></li>
+        </ul>
+      </nav>
+      <div class="newsletter">
+        <h2>Newsletter</h2>
+        <p>For the latest updates and special offers</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Enter Your Email" required>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="social-icons">
+
+          <a href="https://www.facebook.com/profile.php?id=100094081238556&mibextid=ZbWKwL" target="_blank"
+            aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg>
+          </a>
+
+          <a href="https://wa.me/94702725683 " target="_blank" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/cart.lanka/?fbclid=IwY2xjawMKSZxleHRuA2FlbQIxMABicmlkETB5V0N1QjNveTd1dGR6T0c2AR7lUbA4C41hRSXgf18AiPKpdcSvGXm5EKuzRQZrplJmboR1jbI5B0Suj8AShA_aem_TLuOxbw9YSJZxfpDpfEpTA#"
+            target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="../../../Termsandcondition/terms.html">Terms and Conditions</a>
+      <a href="../../../PrivacyPolicy/index.html">Privacy Policy</a>
+      <a href="../../../FAQ/index.html">FAQ</a>
+
+    </div>
+
+    <div class="footer-p">
+      <p>Website Designed &amp; Developed by Phanthom Group</p>
+    </div>
+
+    <div class="terms">
+      <h6>© 2025 Phanthom Global, All Rights Reserved</h6>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

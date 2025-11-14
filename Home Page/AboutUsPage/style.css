@@ -86,13 +86,14 @@ body {
   .blog-posts-container {
     grid-template-columns: 1fr;
   }
+
   .full-width {
     grid-column: span 1;
   }
 }
 
 
-   header {
+header {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -191,6 +192,7 @@ body {
       opacity: 0;
       transform: translateY(-10px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -316,6 +318,7 @@ body {
       opacity: 0;
       transform: translateY(-10px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -364,7 +367,3 @@ body {
     font-size: 0.75em;
   }
 }
-
-
-
-
