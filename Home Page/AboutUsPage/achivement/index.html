@@ -176,6 +176,7 @@
       }
     }
 
+    /* Banner Text */
     .banner h1 {
       color: #ffffff;
       font-size: 42px;
@@ -313,6 +314,7 @@
 <body>
 
   <header>
+    <!-- Header -->
     <a href="../../main.html" class="brand">
 
       <img src="../../New folder/logo2.png" alt="Phanthom Global Logo" class="brand-logo">
@@ -391,7 +393,7 @@
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
-
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">
@@ -475,6 +477,7 @@
   </footer>
 
   <script>
+    // Hide/Show Navigation on Scroll
     document.addEventListener('DOMContentLoaded', function () {
       let lastScroll = 0;
       const header = document.querySelector('header');
@@ -501,7 +504,6 @@
     // Footer Accordion Toggle for Mobile
     document.addEventListener('DOMContentLoaded', function () {
 
-      // Only run on mobile screens
       function initFooterAccordion() {
         if (window.innerWidth <= 768) {
           const footerLists = document.querySelectorAll('.footer-nav ul');
@@ -510,11 +512,9 @@
             const firstItem = ul.querySelector('li:first-child');
 
             if (firstItem) {
-              // Remove any existing click listeners
               firstItem.replaceWith(firstItem.cloneNode(true));
               const newFirstItem = ul.querySelector('li:first-child');
 
-              // Add click event
               newFirstItem.addEventListener('click', function (e) {
                 e.preventDefault();
                 ul.classList.toggle('active');
@@ -524,10 +524,8 @@
         }
       }
 
-      // Initialize on load
       initFooterAccordion();
 
-      // Re-initialize on window resize
       let resizeTimer;
       window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);

@@ -1,17 +1,11 @@
-const video = document.createElement("video");
-video.id = "bg-video";
-video.autoplay = true;
-video.muted = true;
-video.loop = true;
-video.playsInline = true;
+//  background image
+document.body.style.backgroundImage = "url('abcd.jpg')"; 
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundPosition = "center";
+document.body.style.backgroundAttachment = "fixed";
+document.body.style.backgroundRepeat = "no-repeat";
 
-const source = document.createElement("source");
-source.src = "abc1.mp4";
-source.type = "video/mp4";
-video.appendChild(source);
-
-document.body.prepend(video);
-
+// Blog posts 
 const allPosts = [
   {
     title: "Phantom Global - Building Bridges to Your Future Abroad",
@@ -49,10 +43,19 @@ const allPosts = [
 
 const blogPostsContainer = document.querySelector(".blog-posts-container");
 
-allPosts.forEach((p) => {
+// Create posts with optimized image loading
+allPosts.forEach((p, index) => {
   const HTML = `
     <div class="thumbnail">
-      <img src="${p.thumbnail}" alt="" />
+      <div class="image-loader"></div>
+      <img 
+        src="${p.thumbnail}" 
+        alt="${p.label}" 
+        loading="lazy"
+        class="post-image"
+        onload="this.classList.add('loaded')"
+        onerror="this.parentElement.classList.add('error')"
+      />
     </div>
     <div class="text-content">
       <div class="label">${p.label}</div>
@@ -61,6 +64,7 @@ allPosts.forEach((p) => {
       <a class="read-more-btn" href="${p.link}">Read More...</a>
     </div>
   `;
+  
   const blogPost = document.createElement("div");
   blogPost.classList.add("blog-post");
   if (p.layout === "full-width") blogPost.classList.add("full-width");
@@ -68,15 +72,13 @@ allPosts.forEach((p) => {
   blogPostsContainer.appendChild(blogPost);
 });
 
-
-
 // Create footer element
 const footer = document.createElement("footer");
 footer.classList.add("site-footer");
 footer.innerHTML = `
   <div class="footer-top">
     <div class="logo">
-      <img src="../New folder/logo2.png" alt="Truly Sri Lanka">
+      <img src="../New folder/logo2.png" alt="Phantom Global Logo" loading="lazy">
     </div>
     <nav class="footer-nav">
       <ul>
@@ -115,7 +117,7 @@ footer.innerHTML = `
             </svg>
           </a>
 
-          <a href="https://wa.me/94702725683 " target="_blank" aria-label="WhatsApp">
+          <a href="https://wa.me/94702725683" target="_blank" aria-label="WhatsApp">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp"
               viewBox="0 0 16 16">
               <path
@@ -150,41 +152,36 @@ footer.innerHTML = `
   </div>
 `;
 
-// Append footer at the very end
 document.body.appendChild(footer);
 
+// Header hide/show on scroll
 document.addEventListener('DOMContentLoaded', function() {
   let lastScroll = 0;
   const header = document.querySelector('header');
   
-  window.addEventListener('scroll', function() {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 50) {
-      header.classList.remove('hide-nav');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll <= 50) {
+        header.classList.remove('hide-nav');
+        lastScroll = currentScroll;
+        return;
+      }
+      
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add('hide-nav');
+      } else if (currentScroll < lastScroll) {
+        header.classList.remove('hide-nav');
+      }
+      
       lastScroll = currentScroll;
-      return;
-    }
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-      header.classList.add('hide-nav');
-    } else if (currentScroll < lastScroll) {
-      header.classList.remove('hide-nav');
-    }
-    
-    lastScroll = currentScroll;
-  });
+    });
+  }
 });
-
-
-
-
-
 
 // Footer Accordion Toggle for Mobile
 document.addEventListener('DOMContentLoaded', function() {
-  
-  // Only run on mobile screens
   function initFooterAccordion() {
     if (window.innerWidth <= 768) {
       const footerLists = document.querySelectorAll('.footer-nav ul');
@@ -193,11 +190,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstItem = ul.querySelector('li:first-child');
         
         if (firstItem) {
-          // Remove any existing click listeners
           firstItem.replaceWith(firstItem.cloneNode(true));
           const newFirstItem = ul.querySelector('li:first-child');
           
-          // Add click event
           newFirstItem.addEventListener('click', function(e) {
             e.preventDefault();
             ul.classList.toggle('active');
@@ -207,10 +202,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Initialize on load
   initFooterAccordion();
   
-  // Re-initialize on window resize
   let resizeTimer;
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);

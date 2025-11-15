@@ -17,6 +17,7 @@
       box-sizing: border-box;
     }
 
+    /* Hide/Show Navigation on Scroll */
     header {
       position: fixed !important;
       top: 0;
@@ -84,6 +85,7 @@
       font-weight: 400;
     }
 
+    
     .banner a {
       display: inline-block;
       padding: 0.8rem 1.8rem;
@@ -186,7 +188,7 @@
       margin-bottom: 0.4rem;
     }
 
-    /* CTA Section */
+    /* Book now box Section */
     .cta {
       text-align: center;
       background: linear-gradient(to right, #00a4af, #ffffff);
@@ -388,6 +390,7 @@
 
 <body>
 
+  <!-- Navigation Bar -->
   <header>
     <a href="../../main.html" class="brand">
 
@@ -509,7 +512,7 @@
     </div>
   </div>
 
-  <!-- CTA -->
+  <!-- Book now Box -->
   <section class="cta">
     <h2>Ready for Adventure?</h2>
     <p>Embark on thrilling journeys and experience extreme adventures across these amazing countries.</p>
@@ -599,6 +602,7 @@
   </footer>
 
   <script>
+    // Hide/Show Navigation on Scroll
     document.addEventListener('DOMContentLoaded', function () {
       let lastScroll = 0;
       const header = document.querySelector('header');
@@ -625,7 +629,6 @@
     // Footer Accordion Toggle for Mobile
     document.addEventListener('DOMContentLoaded', function () {
 
-      // Only run on mobile screens
       function initFooterAccordion() {
         if (window.innerWidth <= 768) {
           const footerLists = document.querySelectorAll('.footer-nav ul');
@@ -634,11 +637,9 @@
             const firstItem = ul.querySelector('li:first-child');
 
             if (firstItem) {
-              // Remove any existing click listeners
               firstItem.replaceWith(firstItem.cloneNode(true));
               const newFirstItem = ul.querySelector('li:first-child');
 
-              // Add click event
               newFirstItem.addEventListener('click', function (e) {
                 e.preventDefault();
                 ul.classList.toggle('active');
@@ -648,10 +649,8 @@
         }
       }
 
-      // Initialize on load
       initFooterAccordion();
 
-      // Re-initialize on window resize
       let resizeTimer;
       window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);

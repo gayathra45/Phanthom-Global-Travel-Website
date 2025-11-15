@@ -64,6 +64,7 @@ document.getElementById('printBtn').addEventListener('click', function(){ window
 
 })();
 
+// Hide/Show Navigation on Scroll
 document.addEventListener('DOMContentLoaded', function() {
   let lastScroll = 0;
   const header = document.querySelector('header');

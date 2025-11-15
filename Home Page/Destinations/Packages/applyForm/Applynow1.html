@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apply Now – Tourism</title>
+  <title>Apply Now Tourism</title>
   <link rel="icon" href="../../../New folder/Favicon (2).png" type="image/png">
 
   <style>
@@ -442,11 +442,64 @@
         font-size: 2rem;
       }
     }
+
+
+
+    header.hide-nav {
+      transform: translateY(-100%) !important;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    header.scrolled {
+      background: rgba(0, 0, 0, 0.4) !important;
+      backdrop-filter: blur(15px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    /* Gradient below navbar */
+    header.scrolled::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.2) 30%,
+          rgba(0, 0, 0, 0.1) 60%,
+          transparent 100%);
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    /* Ensure header can hide */
+    header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+      transition: transform 0.4s cubic-bezier(0.3, 0, 0, 0) !important;
+      overflow: visible !important;
+    }
+
+    body {
+      padding-top: 80px !important;
+    }
+
+    .hero-section {
+      margin-top: -80px !important;
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation Bar -->
   <header>
     <a href="../../../main.html" class="brand">
       <img src="../../../New folder/logo2.png" alt="Phantom Global Logo" class="brand-logo">
@@ -472,6 +525,7 @@
   <link rel="stylesheet" href="../../../main.css">
   <script src="../../../main.js"></script>
 
+  <!-- HERO SECTION -->
   <div class="hero-section">
     <div class="hero-content">
       <h1>Join our family</h1>
@@ -484,11 +538,13 @@
     </div>
   </div>
 
+  <!-- Success Message -->
   <div class="success-message" id="successMessage">
     <h3>✓ Application Successfully Submitted!</h3>
     <p>Thank you for your application. We will review it and get back to you soon.</p>
   </div>
 
+  <!-- Application Form -->
   <form action="#" id="applicationForm">
     <div class="progress-bar">
       <div class="progress-fill" id="progressFill"></div>
@@ -619,6 +675,7 @@
 
     <br><br>
 
+    <!-- Contact Details -->
     <h2>Contact Details</h2>
 
     <div class="d">
@@ -665,6 +722,7 @@
 
     <br><br>
 
+    <!-- Travel Information -->
     <h2>Travel Information</h2>
 
     <div class="d"><label>Do you have at least NZD $1000 available for each month *</label></div>
@@ -710,6 +768,7 @@
 
     <br><br>
 
+    <!-- Character Details -->
     <h2>Character Details</h2>
 
     <div class="d"><label>Have you ever been convicted of any offence? *</label></div>
@@ -767,6 +826,7 @@
 
     <br><br>
 
+    <!-- Medical Condition -->
     <h2>Medical Condition</h2>
 
     <div class="d"><label>Do you have tuberculosis? *</label></div>
@@ -825,6 +885,8 @@
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
   <script src="../script.js"></script>
 
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">

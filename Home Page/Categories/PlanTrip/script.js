@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Footer Accordion Toggle for Mobile
 document.addEventListener('DOMContentLoaded', function() {
   
-  // Only run on mobile screens
   function initFooterAccordion() {
     if (window.innerWidth <= 768) {
       const footerLists = document.querySelectorAll('.footer-nav ul');
@@ -94,11 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstItem = ul.querySelector('li:first-child');
         
         if (firstItem) {
-          // Remove any existing click listeners
           firstItem.replaceWith(firstItem.cloneNode(true));
           const newFirstItem = ul.querySelector('li:first-child');
           
-          // Add click event
           newFirstItem.addEventListener('click', function(e) {
             e.preventDefault();
             ul.classList.toggle('active');
@@ -108,10 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Initialize on load
   initFooterAccordion();
   
-  // Re-initialize on window resize
   let resizeTimer;
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);

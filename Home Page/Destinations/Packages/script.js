@@ -64,6 +64,7 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const gallery = document.getElementById('gallery');
 
+// Open lightbox on image click
 gallery?.addEventListener('click', (e) => {
   const img = e.target.closest('img');
   if (!img) return;
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScrollY = window.scrollY;
     let ticking = false;
     
+    // Determine main section based on page type
     const isSecondPage = document.querySelector('.hero') !== null;
     const mainSection = isSecondPage ? document.querySelector('.hero') : document.querySelector('.home');
     
@@ -123,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
       ticking = false;
     }
 
+    // Scroll event listener
     window.addEventListener('scroll', () => {
       const currentScrollY = window.scrollY;
       if (!ticking) {

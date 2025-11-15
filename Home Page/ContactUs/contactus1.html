@@ -9,6 +9,7 @@
   <link rel="icon" href="../New folder/Favicon (2).png" type="image/png">
 
   <style>
+    /* GOOGLE FONTS */
     @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
 
     :root {
@@ -223,6 +224,7 @@
       }
     }
 
+    /* HIDE/SHOW NAVIGATION ON SCROLL */
     header {
       position: fixed !important;
       top: 0;
@@ -262,6 +264,7 @@
       z-index: 1;
       animation: fadeIn 1s ease forwards;
     }
+
 
     #contact-form h2 {
       font-family: 'Audiowide', cursive;
@@ -394,6 +397,7 @@
 
 <body>
 
+  <!--Navigation bar-->
   <header>
     <a href="../main.html" class="brand">
 
@@ -459,14 +463,14 @@
     </section>
   </div>
 
-
+  <!-- Location Section -->
   <section class="location-section">
     <div class="box">
       <h1>Our Location</h1>
       <p>Phantom Global is proudly based in Matara, a lively coastal city in the Southern Province of Sri Lanka. Located
         at Matara Town, our office is surrounded by scenic beaches and a vibrant local culture, making it an ideal hub
         for travel planning. With easy access to both the southern expressway and nearby attractions, our location
-        ensures that clients can conveniently connect with us to begin their journeys. Whether you’re preparing for a
+        ensures that clients can conveniently connect with us to begin their journeys. Whether you're preparing for a
         relaxing beach getaway or an international adventure, we are here in Matara to guide you every step of the way.
       </p>
     </div>
@@ -479,7 +483,7 @@
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
-
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">
@@ -563,6 +567,7 @@
   </footer>
 
   <script>
+    // Hide/Show Navigation on Scroll
     document.addEventListener('DOMContentLoaded', function () {
       let lastScroll = 0;
       const header = document.querySelector('header');

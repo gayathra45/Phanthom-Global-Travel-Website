@@ -57,8 +57,8 @@
       // this.reset();
     });
 
-
-document.addEventListener('DOMContentLoaded', function() {
+    // --- Continuous Scrolling Slider ---
+  document.addEventListener('DOMContentLoaded', function() {
   let lastScroll = 0;
   const header = document.querySelector('header');
   

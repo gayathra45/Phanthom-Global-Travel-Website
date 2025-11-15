@@ -122,7 +122,7 @@ document.querySelectorAll('.services .card').forEach(card => {
 });
 
 
-
+// Footer navigation toggle
 document.querySelectorAll(".footer-nav ul").forEach(ul => {
   ul.querySelector("li:first-child").addEventListener("click", () => {
     ul.classList.toggle("active");

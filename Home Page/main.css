@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +14,7 @@ body {
   padding: 0;
 }
 
+/* -------- NAVBAR SECTION -------- */
 header {
   position: fixed;
   top: 0;
@@ -32,17 +32,17 @@ header {
   will-change: transform;
 }
 
+/* Brand Logo and Text */
 header .brand {
   display: flex;
   align-items: center;
   gap: 3px;
-  /* space between logo and text */
   text-decoration: none;
 }
 
+/* Logo Image */
 header .brand img {
   height: 50px;
-  /* adjust size */
   width: auto;
   display: block;
 }
@@ -54,16 +54,19 @@ header .brand {
   text-transform: uppercase;
 }
 
+/* Navigation Hide on Scroll */
 header.nav-hide {
   transform: translateY(-100%);
 }
 
+/* Scrolled State */
 header.scrolled {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 }
 
+/* Navigation Menu */
 header .navigation {
   display: flex;
   gap: 40px;
@@ -101,21 +104,20 @@ header .navigation .navigation-items a:hover:before {
   width: 100%;
 }
 
+/* Section Padding */
 section {
   padding: 120px 150px;
 }
 
-/* Mobile-only brand text swap (no HTML/JS changes) */
+/* Mobile-only brand text swap  */
 @media (max-width: 1040px) {
   header .brand {
     position: relative;
     font-size: 0;
-    /* hides the original text only; the logo image is unaffected */
   }
 
   header .brand::after {
     content: 'hanthom Global';
-    /* <-- change this to whatever you want shown on mobile */
     display: inline-block;
     font-size: 1.0rem;
     font-weight: 700;
@@ -133,7 +135,7 @@ section {
 }
 
 
-
+/* -------- HOME SECTION -------- */
 .home {
   min-height: 100vh;
   display: flex;
@@ -215,6 +217,7 @@ section {
   overflow: hidden;
 }
 
+/* Read More Button */
 .read-more {
   display: inline-block;
   background: #ffffff;
@@ -225,7 +228,6 @@ section {
   text-decoration: none;
   border-radius: 2px;
   cursor: pointer;
-  /* 🖱 shows hand pointer */
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -238,11 +240,10 @@ section {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background-color: #2e74a2;
-  /* New background color */
   color: #ffffff;
-  /* New text color */
 }
 
+/* Slider Navigation Dots */
 .slider-navigation {
   z-index: 888;
   position: relative;
@@ -250,9 +251,7 @@ section {
   justify-content: center;
   align-items: center;
   transform: translateY(-60px);
-  /* move up more */
   margin-bottom: 0;
-  /* optional: remove bottom space */
 }
 
 .slider-navigation .nav-btn {
@@ -278,10 +277,12 @@ section {
   transform: scale(1.3);
 }
 
+
 body.nav-open .slider-navigation {
   display: none;
 }
 
+/* Video Slide Animation */
 .video-slide {
   position: absolute;
   width: 100%;
@@ -300,12 +301,10 @@ body.nav-open .slider-navigation {
 @media (max-width: 768px) {
   section {
     padding: 60px 80px;
-    /* less padding */
   }
 
   .home {
     padding-top: 250px;
-    /* smaller top spacing */
   }
 
   .home .content {
@@ -313,12 +312,11 @@ body.nav-open .slider-navigation {
     text-align: left;
     padding: 0 10px;
     transform: translateY(-40px);
-    /* less shift */
   }
 
+  
   .home .content h1 {
     font-size: 2em;
-    /* smaller headline */
     line-height: 1.3em;
     letter-spacing: 2px;
     margin-bottom: 30px;
@@ -330,14 +328,12 @@ body.nav-open .slider-navigation {
 
   .home .content p {
     font-size: 1em;
-    /* smaller paragraph */
     line-height: 1.5em;
     margin-bottom: 30px;
   }
 
   .home .content a {
     padding: 10px 20px;
-    /* smaller button */
     font-size: 0.9em;
     border-radius: 20px;
   }
@@ -356,7 +352,6 @@ body.nav-open .slider-navigation {
 
   .curve-divider svg {
     height: 50px;
-    /* make wave smaller on mobile */
   }
 }
 
@@ -432,7 +427,7 @@ body.nav-open .slider-navigation {
   top: 10px;
 }
 
-/* MOBILE STYLES */
+/* -------- MOBILE VIEW -------- */
 @media (max-width: 1040px) {
   header {
     padding: 12px 20px;
@@ -463,6 +458,7 @@ body.nav-open .slider-navigation {
     z-index: 999;
   }
 
+  /* Active state for mobile nav */
   header .navigation.active {
     right: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -490,6 +486,7 @@ body.nav-open .slider-navigation {
 }
 
 
+/* -------- SERVICE SECTION -------- */
 .serve-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -555,6 +552,7 @@ body.nav-open .slider-navigation {
   }
 }
 
+/* -------- MAP SECTION -------- */
 .map-image {
   width: 100%;
   max-width: 1100px;
@@ -591,6 +589,7 @@ body.nav-open .slider-navigation {
   margin-bottom: 1em;
 }
 
+/* Pins maps */
 .pin {
   background: #74f3ff;
   position: absolute;
@@ -647,7 +646,6 @@ body.nav-open .slider-navigation {
   left: auto;
   right: 0;
   transform: translateX(0);
-  /* ✅ keeps it in place and allows hover scale to work */
 }
 
 .pin.newzealand button:hover {
@@ -696,6 +694,7 @@ body.nav-open .slider-navigation {
   }
 }
 
+/* -------- Categories SECTION -------- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -738,13 +737,13 @@ body.nav-open .slider-navigation {
 
 }
 
+
 .overlay::before,
 .overlay::after {
   content: "";
   position: absolute;
   top: 50%;
   width: 100px;
-  /* adjust length */
   height: 2px;
   background: white;
 }
@@ -788,7 +787,7 @@ body.nav-open .slider-navigation {
   font-weight: bold;
 }
 
-/* Layout sizing */
+
 .beach {
   grid-column: span 1;
   grid-row: span 1;
@@ -835,13 +834,10 @@ body.nav-open .slider-navigation {
 }
 
 
-/* Keep original 4-column gallery design on mobile; just scale it */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
-    /* same layout */
     grid-auto-rows: 18vw;
-    /* scale row height with viewport */
     gap: 6px;
     padding: 6px;
   }
@@ -850,7 +846,6 @@ body.nav-open .slider-navigation {
     object-position: center;
   }
 
-  /* Scale overlay text and decorative lines */
   .gallery .overlay {
     font-size: clamp(10px, 2.8vw, 14px);
     letter-spacing: 0.5px;
@@ -863,7 +858,6 @@ body.nav-open .slider-navigation {
     height: 2px;
   }
 
-  /* Text block scales but keeps the 2x2 span */
   .gallery .text-block {
     padding: 12px;
   }
@@ -884,7 +878,6 @@ body.nav-open .slider-navigation {
 @media (max-width: 480px) {
   .gallery {
     grid-auto-rows: 22vw;
-    /* a bit taller rows for very small screens */
     gap: 5px;
     padding: 5px;
   }
@@ -901,6 +894,7 @@ body.nav-open .slider-navigation {
 
 
 
+/* --------POPULAR DESTINATION SECTION -------- */
 .destination-section {
   position: relative;
   width: 100%;
@@ -999,8 +993,6 @@ body.nav-open .slider-navigation {
 }
 
 
-
-/* ✅ Mobile View (keep original design, only shrink to fit) */
 @media (max-width: 768px) {
   .destination-section {
     padding: 40px 10px;
@@ -1018,7 +1010,6 @@ body.nav-open .slider-navigation {
   .tours-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* keep 2 per row */
     gap: 12px;
   }
 
@@ -1030,18 +1021,13 @@ body.nav-open .slider-navigation {
   .tour-img {
     width: 100%;
     aspect-ratio: 16/9;
-    /* ✅ keeps images equal height */
     object-fit: cover;
-    /* ✅ crops neatly without distortion */
     display: block;
   }
 
-
   .tour-name {
     font-size: 1rem;
-
   }
-
   .tour-section {
     font-size: 0;
   }
@@ -1073,7 +1059,7 @@ body.nav-open .slider-navigation {
 
 
 
-
+/* -------- FOOTER SECTION -------- */
 .site-footer {
   background: url('./New folder/footer3.png') center/cover no-repeat;
   color: #fff;
@@ -1138,7 +1124,6 @@ body.nav-open .slider-navigation {
 
 .newsletter input {
   flex: 1;
-  /* take up most of the space */
   padding: 6px;
   font-size: 0.85em;
   border: none;
@@ -1146,11 +1131,8 @@ body.nav-open .slider-navigation {
 
 .newsletter input[type="email"] {
   width: 250px !important;
-  /* increase width */
   height: 40px !important;
-  /* increase height */
   padding: 10px !important;
-  /* more padding for better size */
   font-size: 1em !important;
   border: none !important;
   box-sizing: border-box !important;
@@ -1158,7 +1140,6 @@ body.nav-open .slider-navigation {
 
 .newsletter button {
   width: 100px;
-  /* shorter button */
   padding: 8px 15px;
   background: #ffd700;
   color: #000;
@@ -1171,7 +1152,6 @@ body.nav-open .slider-navigation {
 .social-icons {
   display: flex;
   gap: 10px;
-  /* space between icons */
   align-items: center;
   margin-top: 100px;
 }
@@ -1184,20 +1164,16 @@ body.nav-open .slider-navigation {
 
 .social-icons a {
   text-decoration: none;
-  /* Remove underline */
   color: inherit;
-  /* Keep icon color same as parent */
 }
 
 .social-icons a svg {
   width: 24px;
-  /* Bigger icons */
   height: 24px;
 }
 
 .social-icons a:hover svg {
   color: #fff049;
-  /* Change color on hover (example: Twitter blue) */
 }
 
 
@@ -1254,7 +1230,6 @@ body.nav-open .slider-navigation {
 @media (max-width: 768px) {
   .site-footer {
     padding: 30px 20px;
-    /* less padding for mobile */
     text-align: center;
   }
 
@@ -1271,7 +1246,6 @@ body.nav-open .slider-navigation {
   .footer-nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2-column layout */
     gap: 30px;
     text-align: left;
     width: 100%;
@@ -1305,7 +1279,6 @@ body.nav-open .slider-navigation {
 
   .social-icons {
     margin-top: 20px;
-    /* reduce big gap */
     justify-content: center;
   }
 
@@ -1326,12 +1299,10 @@ body.nav-open .slider-navigation {
     font-size: 0.75em;
   }
 
-  /* Hide nav items under headings by default (mobile only) */
   .footer-nav ul li:not(:first-child) {
     display: none;
   }
 
-  /* Style headings like accordion headers */
   .footer-nav ul li:first-child {
     display: flex;
     justify-content: space-between;
@@ -1342,7 +1313,6 @@ body.nav-open .slider-navigation {
     color: #ffffff;
   }
 
-  /* Add toggle arrow */
   .footer-nav ul li:first-child::after {
     content: "+";
     font-weight: bold;
@@ -1350,12 +1320,10 @@ body.nav-open .slider-navigation {
     margin-left: 10px;
   }
 
-  /* When active, show items */
   .footer-nav ul.active li {
     display: block;
   }
 
-  /* When active, change + to - */
   .footer-nav ul.active li:first-child::after {
     content: "−";
   }
@@ -1367,7 +1335,6 @@ body.nav-open .slider-navigation {
 @media (max-width: 480px) {
   .home .content h1 {
     font-size: 1.5em;
-    /* smaller heading */
     line-height: 1.2em;
     margin-bottom: 20px;
   }
@@ -1401,7 +1368,6 @@ body.nav-open .slider-navigation {
     top: 0;
     right: -100%;
     width: 80%;
-    /* Changed from 80% to cover full width */
     height: 100vh;
     background: none;
     backdrop-filter: none;
@@ -1422,7 +1388,6 @@ body.nav-open .slider-navigation {
     box-shadow: -4px 0 10px rgba(255, 255, 255, 0.2);
   }
 
-  /* Add a pseudo-element to create the full blur background */
   header .navigation.active::before {
     content: '';
     position: absolute;
@@ -1434,7 +1399,6 @@ body.nav-open .slider-navigation {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     z-index: -1;
-    /* Place behind the navigation items */
   }
 
   header .navigation .navigation-items {
@@ -1443,7 +1407,6 @@ body.nav-open .slider-navigation {
     gap: 30px;
     position: relative;
     z-index: 1;
-    /* Ensure items are above the blur background */
   }
 
   header .navigation .navigation-items a {

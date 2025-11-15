@@ -23,7 +23,6 @@
     h2,
     h3 {
       font-family: 'Oswald', cursive;
-      /* Fancy font for headings */
     }
 
     header {
@@ -143,7 +142,7 @@
 
       /* Change + to − when active */
       .footer-nav ul.active li:first-child::after {
-        content: "−";
+        content: "-";
         transform: rotate(180deg);
       }
 
@@ -287,6 +286,7 @@
 
 <body>
 
+  <!-- Navigation Bar -->
   <header>
     <a href="../main.html" class="brand">
 
@@ -314,6 +314,7 @@
   <script src="../main.js"></script>
 
 
+  <!-- Video Section -->
   <div class="video-container">
     <video autoplay muted loop>
       <source src="./siwizerlandVedio.mp4" type="video/mp4">
@@ -329,7 +330,7 @@
     <p>Switzerland is a small but beautiful country in Central Europe, surrounded by Germany, France, Italy, Austria,
       and Liechtenstein. It is well known for the Swiss Alps, peaceful lakes, green valleys, and famous products like
       chocolate and watches. The capital is Bern, while Zurich is the largest city, and the country has four official
-      languages: German, French, Italian, and Romansh. Switzerland’s economy is strong, with banking, tourism, and
+      languages: German, French, Italian, and Romansh. Switzerland's economy is strong, with banking, tourism, and
       high-quality industries playing important roles. Popular attractions include the Matterhorn, Lake Geneva, Jungfrau
       region, and ski resorts like Zermatt. With its mix of natural beauty and cultural diversity, Switzerland is a
       popular destination all year round.</p>
@@ -344,10 +345,10 @@
       <div class="place-image" style="background-image:url('./Lucerneswizland.jpg');"></div>
       <div class="place-info">
         <h3>Lucerne</h3>
-        <p>Between its breathtaking landscapes, rich history, and host of attractions, it’s one of the top 10 places to
-          visit in Switzerland for sure. It’s a city that should be on every backpacker’s itinerary.Among many other
+        <p>Between its breathtaking landscapes, rich history, and host of attractions, it's one of the top 10 places to
+          visit in Switzerland for sure. It's a city that should be on every backpacker's itinerary.Among many other
           things, you can look forward to exploring the iconic Kapellbrücke (Chapel Bridge), marvelling at the Lion
-          Monument, and strolling the boisterous, cobblestone streets of the city’s historic Old Town.The city also
+          Monument, and strolling the boisterous, cobblestone streets of the city's historic Old Town.The city also
           offers plenty of budget-friendly options for accommodation, like hostels and guesthouses, along with a variety
           of affordable dining options, for budget backpackers looking to savour Swiss cuisine.</p>
       </div>
@@ -360,7 +361,7 @@
         <p>Discover the cosmopolitan Geneva, which, among many other things, has earned a well-deserved title as a
           diplomatic hub and cultural centre. The area consistently seduces travellers with its historical sites,
           unspoiled natural beauty, and vibrant life force. Be sure to pick up the Geneva Transport Card if you decide
-          to visit, you can get it at most accommodations. It’ll allow you to enjoy unlimited travel on buses, trams,
+          to visit, you can get it at most accommodations. It'll allow you to enjoy unlimited travel on buses, trams,
           and even boats across the lake, making it easy to explore the city on a budget.
 
         </p>
@@ -370,7 +371,7 @@
     <div class="place-card">
       <div class="place-image" style="background-image: url('./Ticino’s\ Lake\ District\ Swizland.jpg');"></div>
       <div class="place-info">
-        <h3>Ticino’s Lake District</h3>
+        <h3>Ticino's Lake District</h3>
         <p>Not only does it offer bewitching scenery and surplus opportunities for swimming and hiking, but it also
           scintillates with gastronomical adventures through Italian-influenced cuisine. The lovely surrounding
           mountains and lakeside towns, like Morcote and Gandria, only add to the charm..</p>
@@ -383,7 +384,7 @@
         <h3>Valle Verzasca</h3>
         <p>Stowed away in the south of Switzerland lies the enchanting Valle Verzasca, a hidden gem known for its homely
           riverbanks, astounding stone bridges, and lush greenery. Take a revitalizing dip in its crystalline waters or
-          hike through the scenic mountains free of charge.If you’re brave, you could even give bungee jumping a bash.
+          hike through the scenic mountains free of charge.If you're brave, you could even give bungee jumping a bash.
         </p>
       </div>
     </div>
@@ -392,11 +393,11 @@
       <div class="place-image" style="background-image: url('./AppenzellSwizland.jpg');"></div>
       <div class="place-info">
         <h3>Appenzell</h3>
-        <p>The town’s history is deeply rooted in Swiss traditions and customs. It’s earned a well-deserved reputation
+        <p>The town's history is deeply rooted in Swiss traditions and customs. It's earned a well-deserved reputation
           for its unique folk art and music. And a great way to experience its enthralling local culture first-hand is
           by paying a visit to the Appenzell Museum or folk festivals, for a deeper understanding of its history and
           customs.I was positively enthralled by the breathtaking vistas, lakes, and majestic mountain peaks I spotted
-          while hiking in the iconic Alpstein area. I’d suggest it to anyone visiting.
+          while hiking in the iconic Alpstein area. I'd suggest it to anyone visiting.
         </p>
       </div>
     </div>
@@ -407,6 +408,7 @@
   <div class="elfsight-app-8f39d8b6-7fdf-456a-b652-69dc7cf56e48" data-elfsight-app-lazy></div>
 
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="logo">
@@ -490,6 +492,7 @@
   </footer>
 
   <script>
+    // Hide/Show Navigation on Scroll
     document.addEventListener('DOMContentLoaded', function () {
       let lastScroll = 0;
       const header = document.querySelector('header');

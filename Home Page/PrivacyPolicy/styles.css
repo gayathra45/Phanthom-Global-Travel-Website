@@ -222,6 +222,7 @@ button:active {
   margin-top: 4px;
 }
 
+/* Accordion Item */
 .acc-item {
   border-radius: 10px;
   overflow: hidden;

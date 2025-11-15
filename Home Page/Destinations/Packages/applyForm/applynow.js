@@ -1,7 +1,10 @@
+
 const form = document.querySelector("form");
 const fname = document.getElementById("name")
 const butt =  document.getElementsByClassName("btn1")
 
+
+// Send Email
 function sendEmail(){
     Email.send({
     Host : "smtp.elasticemail.com",
@@ -16,6 +19,8 @@ function sendEmail(){
 );
 }
 
+
+// Question 1
 function hideshow(val) {
     if(val==2){
         document.getElementById('fn').style.display='none';
@@ -35,7 +40,7 @@ function hideshow(val) {
 }
 
 
-
+// Question 1
 function checkInput() {
     const items = document.querySelectorAll(".intt");
 
@@ -106,7 +111,7 @@ function checkInput() {
 
 
 
-
+// Question 0
 function checkInputsq0() {
     let valid = true;
 
@@ -138,6 +143,8 @@ function checkInputsq0() {
 
 }
 
+
+// One Question
 function checkInputsq1() {
     let valid = true;
 
@@ -171,6 +178,8 @@ function checkInputsq1() {
 
 }
 
+
+// Two Question
 function checkInputsq2() {
     let valid = true;
 
@@ -204,6 +213,8 @@ function checkInputsq2() {
 
 }
 
+
+// Three Question
 function checkInputsq3() {
     let valid = true;
 
@@ -237,6 +248,8 @@ function checkInputsq3() {
 
 }
 
+
+// Four Question
 function checkInputsq4() {
     let valid = true;
 
@@ -270,6 +283,7 @@ function checkInputsq4() {
 
 }
 
+// Five Question
 function checkInputsq5() {
     let valid = true;
 
@@ -303,6 +317,7 @@ function checkInputsq5() {
 
 }
 
+// Six Question
 function checkInputsq6() {
     let valid = true;
 
@@ -336,6 +351,8 @@ function checkInputsq6() {
 
 }
 
+
+// Seven Question
 function checkInputsq7() {
     let valid = true;
 
@@ -369,6 +386,8 @@ function checkInputsq7() {
 
 }
 
+
+// Eight Question
 function checkInputsq8() {
     let valid = true;
 
@@ -401,6 +420,7 @@ function checkInputsq8() {
 
 }
 
+// Question 9
 function checkInputsq9() {
     let valid = true;
 
@@ -472,35 +492,7 @@ function submit(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// form.addEventListener("Next", (e) =>{
-//     e.preventDefault();
-//     checkInput()
-   
-    
-// });
-
-
+// Event listener for form submission
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
     checkInputsq0()
@@ -516,4 +508,77 @@ form.addEventListener("submit", (e) =>{
     submit()
     checkInput();
     
+});
+
+// --------------------------
+// SUCCESS MESSAGE (NO CHANGES TO ORIGINAL CODE)
+// --------------------------
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function () {
+
+        // Wait 500ms → then show success message
+        setTimeout(() => {
+
+            // Check if already added to prevent duplicates
+            if (!document.getElementById("finalSuccessBox")) {
+
+                const msg = document.createElement("div");
+                msg.id = "finalSuccessBox";
+                msg.style.padding = "15px";
+                msg.style.background = "#4BB543";
+                msg.style.color = "white";
+                msg.style.borderRadius = "8px";
+                msg.style.textAlign = "center";
+                msg.style.marginTop = "20px";
+                msg.innerText = "Application Successfully Submitted!";
+
+                form.parentNode.insertBefore(msg, form.nextSibling);
+            }
+
+        }, 500);
+
+    });
+
+});
+
+// Hide/Show Navigation on Scroll with Dark Blur Effect
+document.addEventListener('DOMContentLoaded', function() {
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
+  const delta = 5;
+  
+  if (!header) {
+    console.error('Header not found!');
+    return;
+  }
+  
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Add blur and background when scrolling past 50px
+    if (scrollTop > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    
+    // Make sure they scroll more than delta
+    if (Math.abs(lastScrollTop - scrollTop) <= delta) {
+      return;
+    }
+    
+    // Hide/Show based on scroll direction
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      // Scrolling DOWN & past 100px - hide header
+      header.classList.add('hide-nav');
+    } else {
+      // Scrolling UP - show header
+      header.classList.remove('hide-nav');
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
 });

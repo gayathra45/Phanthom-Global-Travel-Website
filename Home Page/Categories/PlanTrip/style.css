@@ -113,6 +113,7 @@
      }
    }
 
+   /* Newsletter */
    .newsletter {
      max-width: 100%;
      margin: 0 auto;
@@ -245,6 +246,7 @@
    padding-top: 25px
  }
 
+ /* input styles */
  .field input[type=text],
  .field input[type=email],
  .field input[type=tel],
@@ -434,6 +436,7 @@
    justify-content: center;
  }
 
+ 
  .modal-content {
    background-color: #fff;
    margin: auto;

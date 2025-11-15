@@ -186,7 +186,7 @@
       margin-bottom: 0.4rem;
     }
 
-    /* CTA Section */
+    /* book now box Section */
     .cta {
       text-align: center;
       background: linear-gradient(to right, #00a4af, #ffffff);
@@ -518,9 +518,9 @@
           <h3>New Zealand</h3>
           <p>Discover off-the-beaten-path locations and local experiences.</p>
           <ul>
-            <li>Hobbiton Movie Set – magical tours</li>
-            <li>Queenstown – adventure & scenic spots</li>
-            <li>Local farmers' markets – authentic cuisine</li>
+            <li>Hobbiton Movie Set - magical tours</li>
+            <li>Queenstown - adventure & scenic spots</li>
+            <li>Local farmers' markets - authentic cuisine</li>
           </ul>
         </div>
       </div>
@@ -535,7 +535,7 @@
           <p>Find hidden gems and authentic Australian experiences.</p>
           <ul>
             <li>Hidden beaches along NSW coast</li>
-            <li>Hunter Valley – wine tours</li>
+            <li>Hunter Valley - wine tours</li>
             <li>Aboriginal cultural experiences</li>
           </ul>
         </div>
@@ -549,9 +549,9 @@
           <h3>Canada</h3>
           <p>Explore natural beauty and lesser-known local attractions.</p>
           <ul>
-            <li>Bay of Fundy – tidal wonders</li>
-            <li>Capilano Suspension Bridge Park – scenic adventure</li>
-            <li>Local artisan markets – souvenirs & crafts</li>
+            <li>Bay of Fundy - tidal wonders</li>
+            <li>Capilano Suspension Bridge Park - scenic adventure</li>
+            <li>Local artisan markets - souvenirs & crafts</li>
           </ul>
         </div>
       </div>
@@ -564,8 +564,8 @@
           <h3>Switzerland</h3>
           <p>Experience hidden trails, scenic lakes, and cultural gems.</p>
           <ul>
-            <li>Appenzell – traditional Swiss villages</li>
-            <li>Rhine Falls – Europe's largest waterfall</li>
+            <li>Appenzell - traditional Swiss villages</li>
+            <li>Rhine Falls - Europe's largest waterfall</li>
             <li>Local alpine cheese tours</li>
           </ul>
         </div>
@@ -580,9 +580,9 @@
           <h3>United Kingdom</h3>
           <p>Discover lesser-known historic towns and cultural experiences.</p>
           <ul>
-            <li>Cotswolds – charming villages & scenic routes</li>
-            <li>Cambridge – punting & historic colleges</li>
-            <li>Local food markets – traditional cuisine</li>
+            <li>Cotswolds - charming villages & scenic routes</li>
+            <li>Cambridge - punting & historic colleges</li>
+            <li>Local food markets - traditional cuisine</li>
           </ul>
         </div>
       </div>
@@ -624,6 +624,7 @@
           <li><a href="../../Categories/sightseeing/index.html">Sightseeing</a></li>
         </ul>
       </nav>
+
       <div class="newsletter">
         <h2>Newsletter</h2>
         <p>For the latest updates and special offers</p>
@@ -680,6 +681,7 @@
   </footer>
 
   <script>
+
     document.addEventListener('DOMContentLoaded', function () {
       let lastScroll = 0;
       const header = document.querySelector('header');
@@ -715,11 +717,9 @@
             const firstItem = ul.querySelector('li:first-child');
 
             if (firstItem) {
-              // Remove any existing click listeners
               firstItem.replaceWith(firstItem.cloneNode(true));
               const newFirstItem = ul.querySelector('li:first-child');
 
-              // Add click event
               newFirstItem.addEventListener('click', function (e) {
                 e.preventDefault();
                 ul.classList.toggle('active');
@@ -729,10 +729,8 @@
         }
       }
 
-      // Initialize on load
       initFooterAccordion();
 
-      // Re-initialize on window resize
       let resizeTimer;
       window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);

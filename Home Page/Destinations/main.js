@@ -135,7 +135,7 @@ document.querySelectorAll('.swiper').forEach((swiperEl, index) => {
   });
 });
 
-
+// Client Testimonials Slider
 const clients = document.querySelectorAll('.client__card');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
@@ -158,7 +158,7 @@ nextBtn.addEventListener('click', () => {
 
 showClient(index); // initial display
 
-
+// Hide/Show Navigation on Scroll
 ScrollReveal().reveal('.choose__image img', { ...scrollRevealOption, origin: 'left' });
 ScrollReveal().reveal('.choose__content .section__subheader', { ...scrollRevealOption, delay: 500 });
 ScrollReveal().reveal('.choose__content .section__header', { ...scrollRevealOption, delay: 700 });
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-
+// Search Box Scroll to Section
 document.querySelector('.search-box .btn').addEventListener('click', function() {
   const sectionId = document.getElementById('country').value; 
   if (!sectionId) return;

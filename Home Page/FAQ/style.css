@@ -22,6 +22,7 @@ body {
   color: var(--text);
 }
 
+
 .container {
   max-width: 1000px;
   margin: 10px auto;
@@ -99,11 +100,13 @@ p.lead {
   font-weight: 600;
 }
 
+/* Slightly smaller and muted meta info */
 .meta {
   font-size: 13px;
   color: var(--muted);
 }
 
+/* Answer section, hidden by default */
 .ans {
   display: none;
   margin-top: 10px;
@@ -114,6 +117,7 @@ p.lead {
   display: block;
 }
 
+/* Tip box style */
 .tip {
   background: linear-gradient(90deg, var(--sky), #ffffff);
   padding: 12px;
@@ -147,7 +151,6 @@ p.lead {
   /* removes extra space */
 }
 
-/* keep your existing styles below... */
 
 /* ===== Mobile View ===== */
 @media (max-width: 768px) {
@@ -324,6 +327,7 @@ body {
     transform: rotate(180deg);
   }
 
+  /* Slide down animation */
   @keyframes slideDown {
     from {
       opacity: 0;
