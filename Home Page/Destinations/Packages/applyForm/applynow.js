@@ -554,6 +554,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Header not found!');
     return;
   }
+
+  
   
   window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -582,3 +584,18 @@ document.addEventListener('DOMContentLoaded', function() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".menu-toggle"); // your 3-bar button
+  const navMenu = document.querySelector(".nav-menu"); // your nav items container
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active"); // show/hide menu
+      menuToggle.classList.toggle("active"); // animate the bars if needed
+    });
+  }
+});
+
+
+

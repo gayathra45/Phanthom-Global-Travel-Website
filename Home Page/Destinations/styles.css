@@ -497,6 +497,7 @@ body {
   .header__content {
     position: relative;
     padding-bottom: 10rem;
+    align-items: center;
   }
 
   .header__content :is(h1, .section__description) {
@@ -666,6 +667,7 @@ body {
   .hero {
     height: auto;
     padding: 40px 20px;
+    align-items: center;
   }
 
   .overlay {
@@ -675,6 +677,7 @@ body {
   .hero-text {
     text-align: center;
     max-width: 100%;
+    align-items: center;
   }
 
   .hero-text h1 {
@@ -979,6 +982,7 @@ body {
 
 @media (max-width: 768px) {
   .hero .hero-text h1 {
+    padding-top: 150px;
     font-size: 1.5rem;
   }
 
@@ -1146,5 +1150,125 @@ body {
   .terms {
     margin-top: 15px;
     font-size: 0.75em;
+  }
+}
+
+
+
+/* ============================================
+   FORCE DESKTOP VIEW FOR SEARCH BOX ONLY
+   Add this at the END of your styles.css file
+   ============================================ */
+
+/* Override mobile styles for search box at all screen sizes */
+@media (max-width: 1024px) {
+  .search-box {
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    gap: 20px !important;
+    padding: 20px !important;
+    max-width: 950px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .search-box .field {
+    flex: 1 !important;
+    width: auto !important;
+    margin-bottom: 0 !important;
+    min-width: 120px !important;
+  }
+
+  .search-box select,
+  .search-box input {
+    width: 100% !important;
+    padding: 10px !important;
+    font-size: 14px !important;
+  }
+
+  .search-box button.btn {
+    width: auto !important;
+    padding: 12px 25px !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    gap: 15px !important;
+    padding: 15px !important;
+    margin-top: 40px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .search-box .field {
+    width: auto !important;
+    flex: 1 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .search-box select,
+  .search-box input {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .search-box button.btn {
+    width: auto !important;
+    text-align: center !important;
+    padding: 12px 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-box {
+    padding: 15px !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .search-box .field {
+    flex: 1 !important;
+    min-width: 80px !important;
+  }
+
+  .search-box input,
+  .search-box select,
+  .search-box button {
+    font-size: 12px !important;
+    padding: 8px 10px !important;
+  }
+
+  .search-box button.btn {
+    width: auto !important;
+    padding: 8px 15px !important;
+  }
+
+  .search-box label {
+    font-size: 11px !important;
+  }
+}
+
+/* Ensure search box stays horizontal on very small screens */
+@media (max-width: 360px) {
+  .search-box {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .search-box .field {
+    min-width: 70px !important;
+  }
+
+  .search-box input,
+  .search-box select {
+    font-size: 11px !important;
+  }
+
+  .search-box button.btn {
+    font-size: 11px !important;
+    padding: 8px 12px !important;
   }
 }
